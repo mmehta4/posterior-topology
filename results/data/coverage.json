@@ -1,0 +1,93 @@
+{
+ "alpha": 0.05,
+ "truth": [
+  0.2,
+  1.1
+ ],
+ "rows": [
+  {
+   "sigma": 0.15,
+   "n": 2000,
+   "hpd": 0.9525,
+   "laplace": 0.4585,
+   "mixture": 0.9535,
+   "moments": 0.9715,
+   "mean_in_hpd": 0.0095,
+   "hpd_area": 0.8799999511046893,
+   "laplace_area": 0.427212539617317,
+   "mixture_area": 0.8545177172424002,
+   "moments_area": 3.2724257108199564,
+   "degenerate": 0
+  },
+  {
+   "sigma": 0.4,
+   "n": 2000,
+   "hpd": 0.9355,
+   "laplace": 0.5135,
+   "mixture": 0.9455,
+   "moments": 0.947,
+   "mean_in_hpd": 0.7195,
+   "hpd_area": 6.23756179297013,
+   "laplace_area": 3.1415795294395976,
+   "mixture_area": 6.101073600504204,
+   "moments_area": 9.014753004472423,
+   "degenerate": 0
+  },
+  {
+   "sigma": 0.56,
+   "n": 2000,
+   "hpd": 0.9435,
+   "laplace": 0.555,
+   "mixture": 0.9295,
+   "moments": 0.9505,
+   "mean_in_hpd": 0.873,
+   "hpd_area": 9.985397120984862,
+   "laplace_area": 6.3326615201936045,
+   "mixture_area": 11.14402575356323,
+   "moments_area": 12.523060745462637,
+   "degenerate": 0
+  },
+  {
+   "sigma": 0.66,
+   "n": 2000,
+   "hpd": 0.9475,
+   "laplace": 0.591,
+   "mixture": 0.901,
+   "moments": 0.962,
+   "mean_in_hpd": 0.904,
+   "hpd_area": 12.505995679613596,
+   "laplace_area": 8.941406813959336,
+   "mixture_area": 14.445316143316,
+   "moments_area": 15.13829907044998,
+   "degenerate": 0
+  },
+  {
+   "sigma": 0.75,
+   "n": 2000,
+   "hpd": 0.958,
+   "laplace": 0.6065,
+   "mixture": 0.8815,
+   "moments": 0.9685,
+   "mean_in_hpd": 0.931,
+   "hpd_area": 14.619764786587906,
+   "laplace_area": 11.687012512098452,
+   "mixture_area": 18.098097666561713,
+   "moments_area": 17.144366522156837,
+   "degenerate": 0
+  },
+  {
+   "sigma": 1.0,
+   "n": 2000,
+   "hpd": 0.976,
+   "laplace": 0.6605,
+   "mixture": 0.8395,
+   "moments": 0.991,
+   "mean_in_hpd": 0.956,
+   "hpd_area": 21.681672406887408,
+   "laplace_area": 21.07691840329808,
+   "mixture_area": 28.349645380412863,
+   "moments_area": 24.297924545177548,
+   "degenerate": 0
+  }
+ ]
+}

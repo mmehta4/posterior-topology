@@ -1,0 +1,142 @@
+[
+ {
+  "alpha": 0.05,
+  "d": 1,
+  "kappa": "1.66839119394708",
+  "table": "1.668391",
+  "quadrature_residual": "5.51e-17"
+ },
+ {
+  "alpha": 0.05,
+  "d": 2,
+  "kappa": "1.99615275773017",
+  "table": "1.996153",
+  "quadrature_residual": "2.09e-17"
+ },
+ {
+  "alpha": 0.05,
+  "d": 3,
+  "kappa": "2.23060456517585",
+  "table": "2.230605",
+  "quadrature_residual": "2.53e-17"
+ },
+ {
+  "alpha": 0.05,
+  "d": 4,
+  "kappa": "2.42431323898841",
+  "table": "2.424313",
+  "quadrature_residual": "8.08e-17"
+ },
+ {
+  "alpha": 0.05,
+  "d": 5,
+  "kappa": "2.59347798736505",
+  "table": "2.593478",
+  "quadrature_residual": "3.09e-17"
+ },
+ {
+  "alpha": 0.05,
+  "d": 6,
+  "kappa": "2.74570004816405",
+  "table": "2.745700",
+  "quadrature_residual": "6.15e-17"
+ },
+ {
+  "alpha": 0.05,
+  "d": 7,
+  "kappa": "2.88529192165921",
+  "table": "2.885292",
+  "quadrature_residual": "5.73e-17"
+ },
+ {
+  "alpha": 0.05,
+  "d": 8,
+  "kappa": "3.01498717132267",
+  "table": "3.014987",
+  "quadrature_residual": "2.41e-17"
+ },
+ {
+  "alpha": 0.05,
+  "d": 9,
+  "kappa": "3.13665065630201",
+  "table": "3.136651",
+  "quadrature_residual": "5.41e-17"
+ },
+ {
+  "alpha": 0.05,
+  "d": 10,
+  "kappa": "3.25162327370147",
+  "table": "3.251623",
+  "quadrature_residual": "7.38e-17"
+ },
+ {
+  "alpha": 0.01,
+  "d": 1,
+  "kappa": "2.33007892278791",
+  "table": "2.330079",
+  "quadrature_residual": "9.49e-18"
+ },
+ {
+  "alpha": 0.01,
+  "d": 2,
+  "kappa": "2.59589880711582",
+  "table": "2.595899",
+  "quadrature_residual": "6.56e-18"
+ },
+ {
+  "alpha": 0.01,
+  "d": 3,
+  "kappa": "2.80249054809606",
+  "table": "2.802491",
+  "quadrature_residual": "8.07e-18"
+ },
+ {
+  "alpha": 0.01,
+  "d": 4,
+  "kappa": "2.97899560121187",
+  "table": "2.978996",
+  "quadrature_residual": "9.78e-18"
+ },
+ {
+  "alpha": 0.01,
+  "d": 5,
+  "kappa": "3.13604309535879",
+  "table": "3.136043",
+  "quadrature_residual": "1.35e-17"
+ },
+ {
+  "alpha": 0.01,
+  "d": 6,
+  "kappa": "3.27908064356017",
+  "table": "3.279081",
+  "quadrature_residual": "1.54e-17"
+ },
+ {
+  "alpha": 0.01,
+  "d": 7,
+  "kappa": "3.41137425079108",
+  "table": "3.411374",
+  "quadrature_residual": "1.22e-17"
+ },
+ {
+  "alpha": 0.01,
+  "d": 8,
+  "kappa": "3.53507486479224",
+  "table": "3.535075",
+  "quadrature_residual": "-1.7e-18"
+ },
+ {
+  "alpha": 0.01,
+  "d": 9,
+  "kappa": "3.65169200105988",
+  "table": "3.651692",
+  "quadrature_residual": "8.59e-18"
+ },
+ {
+  "alpha": 0.01,
+  "d": 10,
+  "kappa": "3.7623350830814",
+  "table": "3.762335",
+  "quadrature_residual": "1.83e-17"
+ }
+]

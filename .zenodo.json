@@ -1,0 +1,8 @@
+{
+  "title": "The topology of range-measurement credible regions: code",
+  "upload_type": "software",
+  "creators": [{"name": "Mehta, Meet"}],
+  "description": "Code that computes every number, table and figure in the paper 'The topology of range-measurement credible regions': exact quadrature for two-range thresholds, topology checks, coverage experiments and figures.",
+  "license": "MIT",
+  "keywords": ["highest-posterior-density region", "Betti number", "Morse theory", "range measurement", "flip ambiguity"]
+}
