@@ -118,8 +118,8 @@ Section~\ref{sec:one} treats one range: the threshold $\kappa_d$, other noise la
 Section~\ref{sec:two} treats two ranges through residual coordinates, with equal and unequal noise levels, and up to
 $d$ ranges; Section~\ref{sec:staircase} certifies the staircase. Section~\ref{sec:high} is the high-dimensional limit,
 and Section~\ref{sec:random} treats random anchors. Appendix~\ref{app:sqrt} proves the square-root law. The
-Supplementary Material contains the Laplace-method proofs (Supplements~\ref{app:c}--\ref{app:high}) and the
-computations (Supplement~\ref{app:comp}).
+Supplementary Material contains the proofs of Theorem~\ref{thm:main}(c) and of Sections~\ref{sec:three}
+and~\ref{sec:high} (Supplements~\ref{app:c}--\ref{app:high}) and the computations (Supplement~\ref{app:comp}).
 
 \paragraph{Notation} $\|\cdot\|$ is the Euclidean norm, $S^k$ the unit $k$-sphere, $\Phi$ and $\varphi$ the standard
 normal distribution function and density, and $z = \Phi^{-1}(1-\alpha)$. $\beta_k(X)$ is the $k$-th Betti number, the
@@ -658,23 +658,86 @@ $a_1$, so $m$ runs $1 \to 2 \to 1$.
 Either way the two-piece phase, flip ambiguity, is absent: the region looks unambiguous because the data are
 inconsistent, not because the flip has been resolved.
 
-\begin{remark}[Three ranges in the plane]\label{rem:three}
+\subsection{Three ranges in the plane}\label{sec:three}
+
 With three non-collinear anchors in $\R^2$, three unit vectors are always linearly dependent, so $S$ may have critical
-points with non-zero residuals. Along a ray from $a_i$, $S(a_i + t\vartheta) - S(a_i) = -2t(r_i - v_i\cdot\vartheta) + O(t^2)$
-with $v_i = \sum_{j \ne i}(\|a_i - a_j\| - r_j)u_{ij}$, where $u_{ij}$ is the unit vector from $a_j$ to $a_i$; so $a_i$ is a
-strict local minimum of $p$ if $r_i > |v_i|$, and not a local minimum if $r_i < |v_i|$. In the plane, $\beta_1(\{S \le c\})$ counts the bounded components of
-$\{S > c\}$, each of which contains a local maximum of $S$, and the cut-off sweeps all levels; so the HPD region has a
-hole at some noise level if and only if $S$ has a local maximum. For the equilateral anchors $(0, 1)$ and $(\pm\sqrt3/2, -1/2)$, no anchor
-qualifies when $x^*$ is the centre, all three do at $x^* = (0, -2.5)$ (where the 95\% region has a hole for $\sigma \approx 0.96$--$1.67$), and
-exactly one does at $(2.5, 1.5)$. $S$ can also have a smooth local maximum, which requires
-$\sum_i r_i/w_i \ge 6$ (the trace of the Hessian is $12 - 2\sum_i r_i/w_i$). For the same anchors and $x^* = (0, -8)$, $S$ has
-a strict local maximum at $(0, 0.221)$, of depth $75.05$, above the depths $71.84$, $71.84$ and $74.35$ of the anchors;
-so the last hole to fill surrounds no anchor, and at $\sigma \approx 6.15$ the $95\%$ region is connected with a single
-hole around that point. Heuristically, $S = \sum_i w_i^2 - 2\sum_i r_iw_i + \sum_i r_i^2$, and when the ranges are large
-compared with the anchor spread the concave term dominates near the anchors, so $S$ has a maximum near the minimiser of
-$\sum_i r_iw_i$, a weighted Fermat point. Which smooth maxima occur in general, and with them the complete sequence of
-topologies for three ranges, is open.
+points with non-zero residuals, and residual coordinates no longer straighten the problem.
+
+\begin{remark}[Holes and maxima]\label{rem:three}
+Along a ray from $a_i$, $S(a_i + t\vartheta) - S(a_i) = -2t(r_i - v_i\cdot\vartheta) + O(t^2)$ with
+$v_i = \sum_{j \ne i}(\|a_i - a_j\| - r_j)u_{ij}$, where $u_{ij}$ is the unit vector from $a_j$ to $a_i$; so $a_i$ is a
+strict local minimum of $p$ if $r_i > |v_i|$, and not a local minimum if $r_i < |v_i|$. In the plane,
+$\beta_1(\{S \le c\})$ counts the bounded components of $\{S > c\}$, each of which contains a local maximum of $S$, and
+the cut-off sweeps all levels; so the HPD region has a hole at some noise level if and only if $S$ has a local maximum,
+at an anchor or a smooth one. A smooth one requires $\sum_i r_i/w_i \ge 6$, since the trace of the Hessian is
+$12 - 2\sum_i r_i/w_i$. For the equilateral anchors $(0, 1)$ and $(\pm\sqrt3/2, -1/2)$, no anchor qualifies when $x^*$
+is the centre, all three do at $x^* = (0, -2.5)$ (where the 95\% region has a hole for $\sigma \approx 0.96$--$1.67$),
+and exactly one does at $(2.5, 1.5)$.
 \end{remark}
+
+When the truth is far from the anchors the picture is complete, and it has a hole that surrounds no anchor. Let $x_F$
+be the Fermat point of the anchors, the minimiser of $F(x) = \sum_i\|x - a_i\|$; let $\bar a$ be their centroid and
+$M = \sum_i(a_i - \bar a)(a_i - \bar a)^\top$, with eigenvalues $\lambda_1 \ge \lambda_2 > 0$; and for unit vectors
+$\theta, \varphi$ put $G_\theta(\varphi) = (\theta - \varphi)^\top M(\theta - \varphi)$.
+
+\begin{theorem}[Far truth]\label{thm:far}
+Let the data be exact, with $x^* = R\theta$, $|\theta| = 1$, the anchors fixed, and $R \to \infty$; assume that the
+critical points of $G_\theta$ on the unit circle are non-degenerate.
+\begin{enumerate}[label=(\roman*)]
+\item If every angle of the anchor triangle is less than $120^\circ$, $S$ has a non-degenerate local maximum $x_R$ with
+$x_R - x_F = O(1/R)$ and $\Delta(x_R) > \Delta(a_i)$ for every $i$, and no anchor is a local maximum of $S$. If one angle
+exceeds $120^\circ$, the anchor at that vertex is a local maximum, and $S$ has no smooth critical point within a fixed
+distance of the anchors.
+\item Outside a fixed disc around the anchors, the critical points of $S$ lie at distance $R + O(1)$ from the origin, in
+directions that tend to the critical points of $G_\theta$: a minimum of $G_\theta$ gives a local minimum of $S$, a
+maximum gives a saddle, and the depth tends to $\frac12 G_\theta$ there. $G_\theta$ has two critical points, or four
+exactly when $(\lambda_1|\theta_1|)^{2/3} + (\lambda_2|\theta_2|)^{2/3} < (\lambda_1 - \lambda_2)^{2/3}$, with $\theta_k$ the
+coordinates of $\theta$ along the eigenvectors of $M$; four needs $\lambda_1 > 2\lambda_2$.
+\item Hence, if every angle is below $120^\circ$ and $G_\theta$ has two critical points, $S$ has exactly three critical
+points, $x^*$, a saddle and $x_R$, and for $d = 2$ the HPD region is contractible for
+$\Delta_\alpha < \frac12\max G_\theta$, a ring around the anchors for $\frac12\max G_\theta < \Delta_\alpha < \Delta(x_R)$,
+and contractible again beyond, where $\Delta(x_R) = \frac12\sum_i(r_i - \|x_F - a_i\|)^2 + O(1/R)$.
+\end{enumerate}
+\end{theorem}
+
+The proof is in Supplement~\ref{app:three}. Its core is the expansion
+$S = \sum_i r_i^2 - 2RF(x) + O(1)$ near the anchors: the least plausible point of the cluster is the one with the
+smallest total distance to the anchors. Seen from far away, three ranges are three nearly equal measurements of one
+distance, and the region behaves like that of a single range whose anchor is the Fermat point (Figure~\ref{fig:three}).
+The threshold of Theorem~\ref{thm:main} carries over approximately: for $x^* = (0, -8)$ and the equilateral anchors above, the hole
+forms at $\sigma = 0.969$ and closes at $\sigma = 6.167$, against $\sqrt{2\Delta(x_R)}/\kappa_2 = 6.137$. When $G_\theta$ has
+four critical points, $S$ has a second local minimum far away. For the anchors $(\pm2, 0)$, $(0, 1.5)$ and
+$\theta = (0, -1)$, $R = 60$, it lies at $(0, 61.0007)$, at depth $2.999$ against the limit $2\lambda_2 = 3$; as the anchors
+become collinear it tends to the mirror image of $x^*$ in their line, at depth $2\lambda_2 \to 0$. It is what remains of
+the flip ambiguity.
+
+\begin{figure}[t]\centering
+\includegraphics[width=\linewidth]{fig14_three.pdf}
+\caption{Three ranges in the plane, anchors $(0, 1)$, $(\pm\sqrt3/2, -1/2)$ (triangles), exact data. (a) Positions of
+$x^*$ at which $S$ has a smooth local maximum (dark): only when the truth is far from the anchors. (b)--(d) $x^* = (0, -8)$
+(cross): the $95\%$ region is an arc, then a ring around all three anchors, then one piece; the hole closes at the smooth
+maximum (amber, at the Fermat point up to $O(1/R)$), at $\sigma = 6.167$, after every anchor has been covered
+(Theorem~\ref{thm:far}). Each panel's Betti numbers were checked on the grid.}
+\label{fig:three}
+\end{figure}
+
+\begin{proposition}[How the Fermat maximum is born]\label{prop:birth}
+Take the anchors $(0, 1)$, $(\pm\sqrt3/2, -1/2)$, exact data with $x^* = (0, -R)$, and $R \ge 2$. The anchor $(0, 1)$ is a
+local maximum of $S$ exactly for $R < 13/2$, and the other two exactly for $R < 2.7227$. On the symmetry axis inside the
+triangle, $S$ has no critical point for $R < R_0 = (1 + 5\sqrt5)/2 = 6.0902$; at $R_0$ a degenerate one appears at
+$(0, (\sqrt5 - 1)/2)$ and splits into a strict local maximum and a saddle. The saddle reaches $(0, 1)$ at $R = 13/2$,
+exactly when that anchor stops being a local maximum, and the maximum tends to the centre, the Fermat point, as
+$R \to \infty$.
+\end{proposition}
+
+So the hole that closes at an anchor for nearby truths and the one that closes at the Fermat point for distant truths
+are exchanged through a fold, at a golden-ratio point of the axis. Two questions remain open. A smooth maximum can occur
+even when $x^*$ is inside the anchor triangle: for the anchors $(2.2308, -0.2168)$, $(-1.2836, -3.3176)$,
+$(2.0261, 0.0052)$ and $x^* = (1.0874, -1.1301)$, $S$ has a strict local maximum at $(2.2112, -0.0204)$, between the two
+anchors $0.30$ apart, so what matters is the distance of the truth relative to the anchor spacing it sees. And in $30\,000$ random
+configurations, with exact and with noisy data, $S$ never had more than one smooth local maximum ($4738$ had one); we
+conjecture that this holds in general, which would make the complete sequence of topologies for three ranges in the
+plane a finite case analysis.
 
 \subsection{Up to $d$ ranges}\label{sec:nranges}
 
@@ -1305,7 +1368,7 @@ $\sigma$ & phase & HPD & Laplace & mixture & moments & HPD & Laplace & mixture &
 \paragraph{Limitations} We assume a flat prior, Gaussian noise (or the class of Theorem~\ref{thm:noise} for one
 range, and Remark~\ref{rem:noise2} for two), noise levels known up to a common factor, and HPD regions; other credible regions can have a different topology. An informative
 prior breaks the rotational symmetry the proofs use, and we expect the thresholds to move but not to disappear. With
-three or more ranges in the plane, critical points need not lie on any line (Remark~\ref{rem:three}).
+three or more ranges in the plane, critical points need not lie on any line (\S\ref{sec:three}).
 
 \paragraph{Code} The software that computes every number, table and figure (Supplement~\ref{app:comp}) will be released in
 a public repository with the published version, with one script per table and figure.
