@@ -36,8 +36,17 @@ Python 3.9 or later; the pinned versions are in `requirements.txt` (mpmath 1.4.1
 | Figures 1–13 | `scripts/paper_figures.py` (after `exact_thresholds.py`) | `paper/full/figs/` |
 
 The library is in `ptopo/`: `exact.py` (two-range quadrature in residual coordinates), `radial.py` (one range, 60-digit
-arithmetic), `topology.py` (Betti numbers on grids, with a GUDHI cross-check). Tests are in `tests/`. The paper source
-is `paper/full/main.tex`, which compiles with XeLaTeX (tectonic).
+arithmetic), `topology.py` (Betti numbers on grids, with a GUDHI cross-check). Tests are in `tests/`.
+
+## The paper
+
+The text lives once, in `paper/full/content/` (abstract, body, appendix, supplement), and is built two ways:
+
+- `paper/full/main.tex`: the arXiv version, a single PDF with the supplement at the end. It compiles with XeLaTeX
+  (`tectonic main.tex`). `python3 paper/full/arxiv/build_arxiv.py` makes the upload archive.
+- `paper/full/aos/build_aos.py`: the Annals of Statistics version, in the journal's `imsart` class (VTeX, MIT licence,
+  included). It writes one .tex file for the paper and one for the supplement, as the journal asks, with references
+  between the two written out as plain numbers taken from the arXiv build.
 
 Other scripts in `scripts/` are from earlier stages of the project and are not needed for the paper.
 

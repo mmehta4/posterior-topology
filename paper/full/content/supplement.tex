@@ -1,0 +1,224 @@
+\section{Proof of Theorem~\ref{thm:main}(c)}\label{app:c}
+
+Let $\lambda_d(u) = (d-1)\log u - (u - \kappa)^2/2$, so that $U$ has density $\propto e^{\lambda_d}$ on $(0, \infty)$. Throughout,
+$\kappa = \sqrt{d/2} + \delta$, and every $O(\cdot)$ is uniform in $|\delta| \le B$ for any fixed $B$.
+
+\begin{lemma}[The mode]\label{lem:mode}
+$\lambda_d$ is strictly concave with unique maximiser $u^* = (\kappa + \sqrt{\kappa^2 + 4(d-1)})/2$. Let
+$a_d = -\lambda_d''(u^*) = 1 + (d-1)/u^{*2}$. Then $1 \le a_d \le 2$ and
+\begin{align*}
+u^* &= \sqrt{2d} + \tfrac23\delta + \frac{4\delta^2 - 18}{27\sqrt{2d}} + O(1/d), &
+2\kappa - u^* &= \tfrac43\delta + \frac{18 - 4\delta^2}{27\sqrt{2d}} + O(1/d),\\
+a_d &= \tfrac32 - \frac{\sqrt2}{3}\,\frac{\delta}{\sqrt d} + O(1/d), &
+\lambda_d'''(u^*) &= \frac{2(d-1)}{u^{*3}} = \frac{1}{\sqrt{2d}} + O(1/d).
+\end{align*}
+\end{lemma}
+
+\begin{proof}
+$\lambda_d'' = -1 - (d-1)/u^2 < 0$, and $u^{*2} = \kappa u^* + d - 1 \ge d - 1$ gives $a_d \le 2$. Next,
+$\kappa^2 + 4(d-1) = \tfrac92 d + \sqrt{2d}\,\delta + \delta^2 - 4$; factoring out $\tfrac92 d$ and expanding the square
+root to second order gives $\sqrt{\kappa^2 + 4(d-1)} = 3\sqrt{d/2} + \delta/3 + (8\delta^2 - 36)/(27\sqrt{2d}) + O(1/d)$,
+hence $u^*$ and $2\kappa - u^*$. Then $u^{*2} = 2d + \tfrac{4\sqrt2}{3}\delta\sqrt d + O(1)$ gives $a_d$ and
+$\lambda_d'''(u^*)$.
+\end{proof}
+
+\begin{lemma}[Laplace]\label{lem:laplace}
+Let $Z_d = \sqrt{a_d}\,(U - u^*)$. Then $\sup_{|\delta| \le B}\sup_x|\Pr(Z_d \le x) - \Phi(x)| \to 0$.
+\end{lemma}
+
+\begin{proof}
+Let $v = u - u^*$ and $\psi(v) = \lambda_d(u^* + v) - \lambda_d(u^*)$, so $\psi(0) = \psi'(0) = 0$ and $\psi''(0) = -a_d$. On
+the window $|v| \le d^{1/8}$, $u \ge \sqrt{2d}/2$ for large $d$, so $|\lambda_d'''| \le 4\sqrt2/\sqrt d$ and
+$\psi(v) = -a_dv^2/2 + O(d^{-1/8})$. Outside it, concavity gives $\psi(v) \le (|v|/h)\psi(\pm h)$ with $h = d^{1/8}$, and
+$\psi(\pm h) \le -h^2/4$ since $a_d \ge 1$, so $\int_{|v| \ge h} e^\psi \le (8/h)e^{-h^2/4} \to 0$. Hence
+$\int e^\psi = \sqrt{2\pi/a_d}\,(1 + o(1))$ and $\int_{-u^*}^{x/\sqrt{a_d}} e^\psi = \sqrt{2\pi/a_d}\,\Phi(x) + o(1)$
+uniformly in $x$.
+\end{proof}
+
+\begin{lemma}[Next order]\label{lem:next}
+There are $C$ and $d_0$ such that for $d \ge d_0$, $|\delta| \le B$ and $x \in \R$,
+\[ \bigl|\Pr(Z_d \le x) - \Phi(x) + \varsigma_d(x^2 + 2)\varphi(x)\bigr| \le C/d, \qquad
+   \varsigma_d = \frac{\lambda_d'''(u^*)}{6a_d^{3/2}}. \]
+\end{lemma}
+
+\begin{proof}
+\emph{Window} $|v| \le \log d$: there $u \ge \sqrt d$ for $d \ge d_0$, so $|\lambda_d''''(u)| = 6(d-1)/u^4 \le 6/d$
+and, with $b = \lambda_d'''(u^*) = O(d^{-1/2})$, Taylor's theorem gives $\psi(v) = -a_dv^2/2 + E(v)$ with
+$E(v) = bv^3/6 + R_4(v)$ and $|R_4(v)| \le v^4/4d$. Since $|E| \le 1$ on the window for $d \ge d_0$,
+$|e^E - 1 - E| \le E^2$, so $e^{\psi(v)} = e^{-a_dv^2/2}(1 + bv^3/6 + Q(v))$ with $|Q(v)| \le C(v^4 + v^6 + v^8)/d$.
+\emph{Error}: since $a_d \ge 1$, $\int e^{-a_dv^2/2}|Q| = O(1/d)$, and extending the main term from the window to $\R$ costs
+$O(e^{-(\log d)^2/4})$. \emph{Tails}: $\psi(\pm\log d) \le -(\log d)^2/4$ for $d \ge d_0$, so by concavity
+$\int_{|v| \ge \log d} e^\psi \le (8/\log d)e^{-(\log d)^2/4}$, and $e^{-(\log d)^2/4} = d^{-(\log d)/4} = o(d^{-k})$ for every $k$.
+\emph{Assemble}: $\int_{-u^*}^{y} e^\psi = \int_{-\infty}^{y} e^{-a_dv^2/2}(1 + bv^3/6)\dd v + O(1/d)$ uniformly in $y$; the
+cubic term is odd, so the normaliser is $\sqrt{2\pi/a_d}\,(1 + O(1/d))$. Substitute $w = \sqrt{a_d}\,v$, use
+$\int_{-\infty}^x w^3\varphi(w)\dd w = -(x^2 + 2)\varphi(x)$, and divide.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}(c)]
+By Lemma~\ref{lem:mode}, $x_d(\delta) := (2\kappa - u^*)\sqrt{a_d} = \bar x_d(\delta) + O(1/d)$ and
+$\varsigma_d = 1/(9\sqrt{3d}) + O(1/d)$, where $\bar x_d(\delta) = \sqrt{8/3}\,\delta + \sqrt3(3 - 2\delta^2)/(9\sqrt d)$;
+the second term combines $\frac{18 - 4\delta^2}{27\sqrt2}$ with $-\tfrac43\delta\cdot\tfrac{\sqrt2}{9}\delta$. Since
+$M_d = \Pr(Z_d \le x_d)$, Lemma~\ref{lem:next} and the Lipschitz continuity of $\Phi$ and of $(x^2 + 2)\varphi(x)$ give
+\[ M_d(\sqrt{d/2} + \delta) = \Phi(\bar x_d(\delta)) - \frac{(\bar x_d^2 + 2)\varphi(\bar x_d)}{9\sqrt{3d}} + O(1/d) \]
+uniformly in $|\delta| \le B$. Put $\delta_0 = z\sqrt{3/8}$, so $2\delta_0^2 = \tfrac34 z^2$, and
+$\delta_\pm = \delta_0 + c/\sqrt d \pm K/d$. Expanding $\Phi$ about $z$, the coefficient of $1/\sqrt d$ in
+$M_d(\sqrt{d/2} + \delta_\pm)$ is $\varphi(z)\bigl[\sqrt{8/3}\,c + (1 - z^2/4)/\sqrt3 - (z^2 + 2)/(9\sqrt3)\bigr]$, which
+vanishes exactly at $c = c_\alpha = (13z^2 - 28)/(72\sqrt2)$. Then
+$M_d(\sqrt{d/2} + \delta_\pm) - (1 - \alpha) = \pm K\sqrt{8/3}\,\varphi(z)/d + O(1/d)$, where the $O(1/d)$ does not
+depend on $K$ for $d \ge \max(d_0, K^2)$. Choosing $K$ large and using Theorem~\ref{thm:main}(a),
+$\sqrt{d/2} + \delta_- < \kappa_d < \sqrt{d/2} + \delta_+$.
+\end{proof}
+
+\section{A two-variable Laplace lemma}\label{app:laplace2}
+
+\begin{lemma}\label{lem:laplace2}
+Let $\mathcal K$ be a compact set of pairs (non-degenerate scaled triangle, $\sigma$). Under the posterior of
+Lemma~\ref{lem:conc}, $\xi = \sqrt d\,(\tilde e - \tilde e^*)$ converges in total variation to $N(0, H^{-1})$, uniformly on
+$\mathcal K$.
+\end{lemma}
+
+\begin{proof}
+By the implicit function theorem $\tilde e^*$ and $H$ are continuous on $\mathcal K$, so there are $\nu, C, \bar\lambda > 0$ such
+that, uniformly: the $\nu$-ball about $\tilde e^*$ lies in $\tilde F$; on it $|\nabla^3\mathcal E_\sigma| \le C$ and
+$\psi = \tilde w_1\tilde w_2\tilde h^{-3}$ satisfies $1/C \le \psi \le C$ and $|\nabla\psi| \le C$; and
+$I/\sigma_{\max}^2 \preceq H \preceq \bar\lambda I$. Let $\varrho_d = d^{-3/8}$.
+
+\emph{Window} $|\tilde e - \tilde e^*| \le \varrho_d$, i.e.\ $|\xi| \le d^{1/8}$. By Taylor's theorem
+$d(\mathcal E_\sigma(\tilde e) - \mathcal E_\sigma(\tilde e^*)) = -\xi^\top H\xi/2 + O(d\varrho_d^3)$ and $\psi(\tilde e) = \psi(\tilde e^*)(1 + O(\varrho_d))$,
+so the density of $\xi$ is $\propto e^{-\xi^\top H\xi/2}(1 + o(1))$ there, uniformly.
+
+\emph{Tails.} On the sphere $|\tilde e - \tilde e^*| = \varrho_d$, $\mathcal E_\sigma - \mathcal E_\sigma^* \le -\varrho_d^2/2\sigma_{\max}^2 + C\varrho_d^3$,
+so by concavity along rays from $\tilde e^*$, $\mathcal E_\sigma(\tilde e) - \mathcal E_\sigma^* \le -c\varrho_d|\tilde e - \tilde e^*|$ outside the
+window, with $c = 1/4\sigma_{\max}^2$, for large $d$. To avoid the singular factor $\tilde h^{-3}$, write the integrand of
+Lemma~\ref{lem:conc} as $e^{(d-3)\mathcal E_\sigma}\,\tilde w_1\tilde w_2\,e^{-3|\tilde e|^2/2\sigma^2}$ and apply the bound to
+$(d-3)\mathcal E_\sigma$. The tail mass relative to $e^{d\mathcal E_\sigma^*}$ is then at most
+$e^{-3\mathcal E_\sigma^*}e^{-c(d-3)\varrho_d^2}\int\tilde w_1\tilde w_2 e^{-3|\tilde e|^2/2\sigma^2}\dd\tilde e = O(e^{-c'd^{1/4}})$, while the
+window carries $\psi(\tilde e^*)(2\pi/d)\det(H)^{-1/2}(1 + o(1))$. So the tail is negligible, and the Gaussian mass of
+$|\xi| > d^{1/8}$ tends to $0$ as well.
+\end{proof}
+
+\section{Proofs for Section~\ref{sec:high}}\label{app:high}
+
+\begin{proof}[Proof of Lemma~\ref{lem:conc}]
+Substituting $e = \sqrt d\,\tilde e$ in Lemma~\ref{lem:residual}(ii), all powers of $\sqrt d$ are constants, and
+\[ e^{-|e|^2/2\sigma^2}w_1w_2h^{d-3} \propto e^{-d|\tilde e|^2/2\sigma^2}\,\tilde w_1\tilde w_2\,\tilde h^{d-3}, \]
+which is the stated form. By Lemma~\ref{lem:weight}(i), $\tilde h^2$ is a constant times $\tilde s'\tilde\ell_*\tilde\ell_1\tilde\ell_2$, four
+functions that are affine in $\tilde e$ and positive on $\tilde F$; so $\log\tilde h$ is concave, $\mathcal E_\sigma$ is strictly
+concave, and $\mathcal E_\sigma \to -\infty$ where some $\tilde\ell_k \to 0$ and, since $\log\tilde h = O(\log|\tilde e|)$, at
+infinity. Its superlevel sets are therefore compact subsets of $\tilde F$, and the maximiser exists, is interior and is
+unique. At $0$ the quadratic term has zero gradient, and the component of $\nabla\log\tilde h(0)$ along
+$(1,1)/\sqrt2$ is $\tfrac{\sqrt2}{4}(1/\tilde s + 1/\tilde t_*) > 0$, so $\tilde e^* \ne 0$. For a symmetric triangle the swap
+$\tilde e_1 \leftrightarrow \tilde e_2$ preserves $\tilde F$ and $\mathcal E_\sigma$, so it fixes the unique maximiser, and $u > 0$
+because $\mathcal E_\sigma$ is concave along the diagonal with positive slope at $0$.
+\end{proof}
+
+\begin{proof}[Proof of Lemma~\ref{lem:cdepth}]
+Since $\log\tilde h$ is concave, $H \succeq I/\sigma^2$. Differentiating $\nabla\log\tilde h(\tilde e^*) = \tilde e^*/\sigma^2$ in
+$\sigma$ (implicit function theorem) gives the derivative of $\tilde e^*$, and $\delta^{*\prime} = \tilde e^*\cdot\dd\tilde e^*/\dd\sigma$.
+For $\sigma < \sigma'$ with maximisers $e, e'$, adding $\mathcal E_\sigma(e) \ge \mathcal E_\sigma(e')$ and
+$\mathcal E_{\sigma'}(e') \ge \mathcal E_{\sigma'}(e)$ gives $(|e'|^2 - |e|^2)(\sigma^{-2} - \sigma'^{-2}) \ge 0$; equality would make
+$e'$ maximise $\mathcal E_\sigma$ as well, so $e' = e$ and $e/\sigma^2 = e/\sigma'^2$, contradicting $e \ne 0$. As $\sigma \to 0$,
+$\mathcal E_\sigma(\tilde e^*) \ge \mathcal E_\sigma(0)$ gives $|\tilde e^*|^2 \le 2\sigma^2(\log\tilde h(\tilde e^*) - \log\tilde h(0)) \to 0$.
+If $\tilde e^*$ stayed bounded as $\sigma \to \infty$, then $\nabla\log\tilde h(\tilde e^*) = \tilde e^*/\sigma^2 \to 0$; but the
+derivative of $\log\tilde h$ along $(1,1)/\sqrt2$ is $\tfrac12\bigl(1/(\sqrt2\,\tilde s') + 1/\tilde\ell_*\bigr)$, which is bounded
+below on bounded sets.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:high}]
+Let $\xi = \sqrt d(\tilde e - \tilde e^*)$. By Lemma~\ref{lem:laplace2}, $\xi$ converges to $N(0, H^{-1})$ in total
+variation, uniformly. Since $\Delta = d|\tilde e|^2/2$, $(\Delta - d\delta^*)/\sqrt d = \tilde e^*\cdot\xi + |\xi|^2/2\sqrt d$. The first
+term tends to $N(0, g^2)$; on $|\xi| \le M$ the event $\{\Delta \le \delta\}$ lies between two half-planes in $\xi$ shifted by
+$\pm M^2/2\sqrt d$, and letting $M \to \infty$ slowly gives
+\[ \sup_t\bigl|\Pi\bigl((\Delta - d\delta^*)/\sqrt d \le t\bigr) - \Phi(t/g)\bigr| \to 0 . \]
+Since $g \ge |\tilde e^*|\,\lambda_{\max}(H)^{-1/2}$ is bounded
+below, the quantiles converge, and the HPD region $\{\Delta \le \Delta_\alpha\}$, a one-sided event of mass $1 - \alpha$, gives
+$\Delta_\alpha = d\delta^* + z\sqrt d\,g + o(\sqrt d)$. A transition of scaled depth $\tilde\Delta_c$ has depth $d\tilde\Delta_c$ and
+occurs when $\Delta_\alpha(\sigma) = d\tilde\Delta_c$ (Theorem~\ref{thm:depth} and Proposition~\ref{prop:axis}), i.e.\ when
+$\delta^*(\sigma) = \tilde\Delta_c - zg/\sqrt d + o(d^{-1/2})$; invert with Lemma~\ref{lem:cdepth}.
+\end{proof}
+
+\begin{proof}[Proof of Corollary~\ref{cor:closed}]
+By Lemma~\ref{lem:conc}, $\tilde e^* = (u, u)$, where $\tilde w = 1 + u$, $\tilde h^2 = \tilde w^2 - \zeta^2$ and
+$\mathcal E_\sigma = \tfrac12\log(\tilde w^2 - \zeta^2) - u^2/\sigma^2$, so stationarity gives $\sigma^2 = 2u\tilde h^2/\tilde w$ and
+$\delta^* = u^2$. The tangent lengths are $\tilde t_* = 1 - \zeta$ and $\tilde t_1 = \tilde t_2 = \zeta$, so the inner contact comes first
+exactly when $\theta > 60^\circ$. For the inner contact $u = 1 - \zeta$, $\tilde w = 2 - \zeta$ and $\tilde h^2 = 4(1 - \zeta)$; for the
+outer contacts $u = \zeta$, $\tilde w = 1 + \zeta$, $\tilde h^2 = 1 + 2\zeta$. By symmetry the diagonal is an eigenvector of $H$, with
+eigenvalue the curvature of $-\mathcal E_\sigma$ along arc length $\sqrt2\,u$,
+$\lambda_\parallel = \tfrac12(\tilde w^2 + \zeta^2)/(\tilde w^2 - \zeta^2)^2 + 1/\sigma^2 = (\zeta^2 - 4\zeta + 6)/(16(1-\zeta)^2)$ at the inner contact;
+so $g^2 = 2u^2/\lambda_\parallel = 32(1-\zeta)^4/(\zeta^2 - 4\zeta + 6)$ and Theorem~\ref{thm:high} gives the coefficient; at the outer
+contacts the same formula gives $\lambda_\parallel = (2\zeta^3 + 4\zeta^2 + 4\zeta + 1)/(2\zeta(1+2\zeta)^2)$ and
+$g^2 = 4\zeta^3(1+2\zeta)^2/(2\zeta^3 + 4\zeta^2 + 4\zeta + 1)$. For one range,
+$\mathcal E_\sigma(\tilde e) = \log(1 + \tilde e) - \tilde e^2/2\sigma^2$ in one variable, the hole fills at depth $r^2/2$, i.e.\
+$\tilde e^* = 1$, so $\sigma^2 = \tilde e^*(1 + \tilde e^*) = 2$, $H = \tfrac14 + \tfrac12$ and $g^2 = 4/3$; and
+$\sqrt d/(\sqrt{d/2} + z\sqrt{3/8}) = \sqrt2 - 2z\sqrt{3/8}/\sqrt d + O(1/d)$.
+\end{proof}
+
+\section{Computation and validation}\label{app:comp}
+
+\paragraph{One range} Substituting $v = u - \kappa$ and expanding $(v + \kappa)^{d-1}$ binomially writes both integrals
+in $M_d$ as finite sums of truncated normal moments, available in closed form through $\Phi$, $\varphi$ and a recursion.
+These sums alternate in sign and cancel heavily for large $d$, so they are evaluated in 60-digit arithmetic
+\citep{mpmath}.
+$\kappa_d(\alpha)$ is found by bisection on $M_d - (1 - \alpha)$, which is monotone by Theorem~\ref{thm:main}(a), to a
+bracket shorter than $10^{-15}$. Every entry of Table~\ref{tab:kappa} was cross-checked by adaptive quadrature of the
+defining integrals at 30 digits: at the computed $\kappa_d$ the quadrature value of $|M_d - (1 - \alpha)|$ is below
+$10^{-16}$ for all 20 entries. The random-anchor probability is
+$P_d(\sigma) = \int_0^\infty f_{\chi_d}(t)\,\Phi\bigl(t/\sigma - \kappa_d\bigr)\dd t$, by adaptive quadrature.
+
+\paragraph{Two ranges: exact thresholds} Every two-range noise level in the paper is computed by quadrature, with no
+grid. By Lemma~\ref{lem:residual}, $\Pi_\sigma(\Delta \le \delta) = N(\sqrt{2\delta})/N(\infty)$ with
+$N(R) = \int_0^R e^{-u^2/2\sigma^2}u\,\mathcal J(u)\dd u$, where $\mathcal J(u)$ is the integral of $J$ over the arcs of the circle
+$|e| = u$ that lie in $F$; the disc boundary is exact in these coordinates. By Lemma~\ref{lem:weight}(i), $J$ is a
+product of powers of $w_1, w_2, s'$ and the three wall distances. We evaluate the wall distances in a cancellation-free
+product form and remove every endpoint power-law factor by the substitution $t = t_{\mathrm{end}} \pm cv^2$, in angle and in
+radius, so all integrands are smooth; composite Gauss--Legendre rules then converge fast. Doubling the nodes changes
+every computed threshold by less than $10^{-9}$ (relative) for $d \ge 3$ and $5\cdot10^{-6}$ for $d = 2$, where $J$ has
+inverse-square-root singularities at the walls. A transition of depth $\Delta_c$ occurs at the root of
+$\Pi_\sigma(\Delta \le \Delta_c) = 1 - \alpha$, unique by Theorem~\ref{thm:depth}, found by Brent's method. This gives the
+ladder of Section~\ref{sec:two} and the transition curves of Figure~\ref{fig:phase}, the exact column of
+Table~\ref{tab:sharp} and the masses outside the disc at $\sigma_1$, and the finite-$d$ values of Figure~\ref{fig:high}. The
+limits and coefficients of Corollary~\ref{cor:closed} agree with a direct two-dimensional maximisation of $\mathcal E_\sigma$
+and a finite-difference Hessian to five decimals.
+
+\paragraph{Two ranges: independent check of the topology} The topology is proved (Proposition~\ref{prop:axis}); the
+computation below only checks it against brute force, under a criterion fixed in advance. For every crossing angle
+$15^\circ, 20^\circ, \dots, 165^\circ$ and $d \in \{2, 3, 4, 6, 10\}$ we take the exact transition levels, and sample one noise
+level below the first, one above the last, and the geometric midpoint of every interval between consecutive transitions
+whose endpoints differ by at least $4\%$ in $\sigma$. At each such level we compare the Betti numbers predicted by
+Proposition~\ref{prop:axis} with (a) the Betti numbers of the grid region in the half-plane ($900 \times 450$ cells, HPD
+level from the sorted cell masses as in \citet{hyndman1996}), computed as a cubical complex and lifted by
+Lemma~\ref{lem:lift}: $536$ of $536$ agree; and (b) for $d = 3$, at six angles and for the asymmetric example, the Betti
+numbers of the full three-dimensional region on a $170^3$ grid, computed by GUDHI \citep{gudhi2014} without using
+Lemma~\ref{lem:lift}: $28$ of $28$ agree. The $79$ intervals narrower than $4\%$ are all two-cavity phases, at crossing
+angles of at most $25^\circ$ or at least $105^\circ$; the five widest of them, sampled on a $2400 \times 1200$ grid, also
+agree. Proposition~\ref{prop:axis} was further checked on $12$ random triangles in $d = 2$ and $3$ at nine noise levels
+each, discarding levels within $2\%$ of a critical value: all $210$ remaining cases agree. The three-dimensional figures
+are isosurfaces of the posterior at the HPD level, extracted by marching cubes \citep{lorensen1987} from $170^3$--$180^3$
+grids, and each panel's Betti numbers were confirmed by GUDHI.
+
+\paragraph{Unequal noise} Theorem~\ref{thm:unequal} was checked against brute-force Betti numbers in the plane on adaptive
+grids ($900$ to $1100$ cells per axis) for five fixed geometries and ten random geometries with random weights, at noise
+levels whose HPD depth is more than $3\%$ from every critical depth: all agree. Its closed forms and the classification in (iii) were checked on
+$20\,000$ random cases (noise-free point uniform on $[-3, 3] \times [0.05, 3]$, $\log s_1, \log s_2$ uniform on
+$[-1.5, 1.5]$): the depths agree with direct minimisation of $\Delta$ over each edge, annihilation occurred in $65.5\%$ of
+cases, never twice, always at the noisier anchor and never first. Corollary~\ref{cor:anchortest} and the two-cavity
+criterion of Remark~\ref{rem:unequal} were checked on $4000$ further random cases, with no exceptions.
+
+\paragraph{Up to $d$ ranges and the unequal-noise certificate} Theorem~\ref{thm:nranges} was checked for $n = d = 3$,
+with anchors $(1, 0, 0)$, $(-\frac12, \pm\frac{\sqrt3}{2}, 0)$ and $x^* = (0.2, 0.1, 0.5)$: $\Delta_{\mathcal A} = 0.021605$,
+reached by $\Delta_\alpha$ at $\sigma \approx 0.0726$, and counting components on a $281^3$ grid gives two pieces at
+$0.5$, $0.8$ and $0.95$ times that level and one piece at $1.05$, $1.2$ and $1.6$ times it. For
+Theorem~\ref{thm:staircaseW}, both certificates were evaluated in $36$ cases (four geometries, three noise ratios,
+$d = 2, 3, 4$; $\beta = 1/\sqrt d$), and the posterior mass outside $|\bar e| < R_W$ was computed at $\sigma_1$ on a
+$1600 \times 800$ half-plane grid with weight $\rho^{d-2}$: it lies between $9.4\cdot10^{-4}$ and $1.0\cdot10^{-2}$,
+against the allowed $0.05$. The true first transition, the root of that mass minus $\alpha$, gives the ratios quoted
+in \S\ref{sec:staircase}. The $d = 2$ certificate also holds at $\alpha = 0.1$, $0.3$ and $0.5$ in the cases tried.
+
+\paragraph{Coverage} For Table~\ref{tab:coverage}, each data set's posterior is evaluated on a $600 \times 600$ grid over the
+square of half-width $\max_i r_i + 1.2 + 5\sigma$ centred between the anchors, and the HPD region is formed from the
+sorted cell masses. The mode is found by the Nelder--Mead method started from the grid maximum or its mirror image, and
+the Hessian of $S$ there by central differences; it was positive definite in all $12\,000$ data sets. The mixture
+places Gaussians with this covariance at the mode and its mirror image in the anchor line, with weights $\frac12$
+(one Gaussian if the mode is on the line), and its HPD region is formed from sorted cell masses on the same grid. The moment-matched
+Gaussian uses the grid mean and covariance. Each noise level uses its own fixed random seed, and rerunning reproduces
+every entry exactly.
