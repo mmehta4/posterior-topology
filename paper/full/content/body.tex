@@ -709,7 +709,8 @@ forms at $\sigma = 0.969$ and closes at $\sigma = 6.167$, against $\sqrt{2\Delta
 four critical points, $S$ has a second local minimum far away. For the anchors $(\pm2, 0)$, $(0, 1.5)$ and
 $\theta = (0, -1)$, $R = 60$, it lies at $(0, 61.0007)$, at depth $2.999$ against the limit $2\lambda_2 = 3$; as the anchors
 become collinear it tends to the mirror image of $x^*$ in their line, at depth $2\lambda_2 \to 0$. It is what remains of
-the flip ambiguity.
+the flip ambiguity, and it can split the region: for $x^* = (0, -20)$ the $95\%$ region is two pieces at $\sigma = 1$,
+a false flip ambiguity although three ranges determine the point.
 
 \begin{figure}[t]\centering
 \includegraphics[width=\linewidth]{fig14_three.pdf}
@@ -731,13 +732,19 @@ $R \to \infty$.
 \end{proposition}
 
 So the hole that closes at an anchor for nearby truths and the one that closes at the Fermat point for distant truths
-are exchanged through a fold, at a golden-ratio point of the axis. Two questions remain open. A smooth maximum can occur
+are exchanged through a fold, at a golden-ratio point of the axis. Not every exchange is a fold: when the radial
+curvature of $S$ at the anchor is negative at the moment its test fails, as on an isosceles triangle with a $115^\circ$
+apex, the anchor releases a smooth maximum directly, at distance $(|v_i| - r_i)/|c|$ from itself, where $c$ is that
+curvature. With noise $\sigma s_i$ on range $i$, the same argument puts the last hole at the minimiser of
+$\sum_i\|x - a_i\|/s_i^2$. Two questions remain open. A smooth maximum can occur
 even when $x^*$ is inside the anchor triangle: for the anchors $(2.2308, -0.2168)$, $(-1.2836, -3.3176)$,
 $(2.0261, 0.0052)$ and $x^* = (1.0874, -1.1301)$, $S$ has a strict local maximum at $(2.2112, -0.0204)$, between the two
 anchors $0.30$ apart, so what matters is the distance of the truth relative to the anchor spacing it sees. And in $30\,000$ random
 configurations, with exact and with noisy data, $S$ never had more than one smooth local maximum ($4738$ had one); we
 conjecture that this holds in general, which would make the complete sequence of topologies for three ranges in the
-plane a finite case analysis.
+plane a finite case analysis. It fails for four anchors: two tight pairs, such as $(2.4153, -0.1525)$, $(2.4712, 0.0281)$
+and $(-3.478, 1.7811)$, $(-3.2678, 1.3587)$ with $x^* = (-1.0069, -1.0872)$, each act as a small far cluster, and $S$ has two
+strict smooth maxima.
 
 \subsection{Up to $d$ ranges}\label{sec:nranges}
 
