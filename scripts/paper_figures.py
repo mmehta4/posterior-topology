@@ -492,8 +492,40 @@ def unequal():
     save(fig, "fig13_unequal")
 
 
+def three_ranges():
+    """(a) Positions of the noise-free point x* (unit equilateral anchors) at which S has a smooth local maximum
+    (results/data/three_range_phase_scan.npz). (b-d) x* = (0, -8): the 95% region before the ring forms, as a ring around
+    the anchors, and after the hole has closed at the Fermat point; each panel's Betti numbers are checked."""
+    from scipy import ndimage
+    A = np.array([[0, 1.0], [np.sqrt(3) / 2, -0.5], [-np.sqrt(3) / 2, -0.5]])
+    fig, axs = plt.subplots(1, 4, figsize=(W1, 1.85), gridspec_kw=dict(wspace=0.08, width_ratios=[1.1, 1, 1, 1]))
+    d = np.load(ROOT / "results/data/three_range_phase_scan.npz"); pts, res = d["pts"], d["res"]
+    g = np.unique(pts[:, 0]); Zc = np.full((len(g), len(g)), np.nan)
+    for (x, y), v in zip(pts, res): Zc[np.searchsorted(g, y), np.searchsorted(g, x)] = v
+    a = axs[0]; a.imshow(Zc, origin="lower", extent=[g[0], g[-1], g[0], g[-1]], cmap=LinearSegmentedColormap.from_list("m", ["#EEF2F7", ACCENT]), vmin=0, vmax=1, interpolation="nearest")
+    for q in A: anchor(a, *q, s=14)
+    a.set_xticks([-8, 0, 8]); a.set_yticks([-8, 0, 8]); a.set_aspect("equal"); a.tick_params(labelsize=6.5)
+    a.set_title("dark: smooth maximum", fontsize=7.5, pad=3); tag(a, "a", x=-0.32, y=1.0)
+    X = np.array([0, -8.0]); r = np.linalg.norm(A - X, axis=1); L, N = 30.0, 1801
+    gg = np.linspace(-L, L, N); XX = np.stack(np.meshgrid(gg, gg, indexing="xy"), -1)
+    D = sum((np.linalg.norm(XX - q, axis=-1) - ri) ** 2 for q, ri in zip(A, r)) / 2
+    for ax, sig, want, title, t in [(axs[1], 0.75, (1, 0), "one piece", "b"), (axs[2], 3.0, (1, 1), "ring", "c"), (axs[3], 6.3, (1, 0), "one piece", "d")]:
+        p_ = np.exp(-(D - D.min()) / sig ** 2); p_ /= p_.sum(); o = np.sort(p_.ravel())[::-1]; c = o[np.searchsorted(np.cumsum(o), 0.95)]
+        Rg = p_ >= c; lab, k = ndimage.label(~Rg); border = set(np.unique(np.r_[lab[0], lab[-1], lab[:, 0], lab[:, -1]])) - {0}
+        b0, b1 = ndimage.label(Rg)[1], k - len(border); assert (b0, b1) == want, (sig, b0, b1)
+        ax.imshow(np.where(Rg, p_ / p_.max(), np.nan), origin="lower", extent=[-L, L, -L, L], cmap=REGION, vmin=0, vmax=1)
+        ax.contour(gg, gg, Rg.astype(float), levels=[0.5], colors=[ACCENT], linewidths=0.7)
+        for q in A: anchor(ax, *q, s=8)
+        ax.scatter([0], [-8], marker="x", s=12, color=INK, lw=0.9, zorder=6)
+        ax.scatter([0], [0.2214], s=6, color=AMBER, zorder=7)
+        ax.set_xlim(-21, 21); ax.set_ylim(-21, 21); ax.set_aspect("equal"); bare(ax)
+        ax.set_title(f"{title}, $\\sigma = {sig:g}$", fontsize=7.5, pad=3); tag(ax, t, x=-0.04, y=1.0)
+    save(fig, "fig14_three")
+
+
 ALL = dict(hero=hero, onerange=onerange, kappa=kappa, mean=mean, triangle=triangle, axis=axis_ladder,
-           phase=phase, first=first_event, sqrt2=sqrt2, residual=residual, high=high_dim, ladder3d=ladder3d, unequal=unequal)
+           phase=phase, first=first_event, sqrt2=sqrt2, residual=residual, high=high_dim, ladder3d=ladder3d, unequal=unequal,
+           three=three_ranges)
 if __name__ == "__main__":
     for name in (sys.argv[1:] or ALL):
         ALL[name]()

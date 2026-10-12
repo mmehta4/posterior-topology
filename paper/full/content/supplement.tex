@@ -69,6 +69,74 @@ depend on $K$ for $d \ge \max(d_0, K^2)$. Choosing $K$ large and using Theorem~\
 $\sqrt{d/2} + \delta_- < \kappa_d < \sqrt{d/2} + \delta_+$.
 \end{proof}
 
+\section{Proofs for Section~\ref{sec:three}}\label{app:three}
+
+\begin{proof}[Proof of Theorem~\ref{thm:far}]
+Write $b_i = r_i - R = -\theta\cdot a_i + O(1/R)$. Then
+\[ S = \sum_i r_i^2 - 2RF(x) + h(x), \qquad h = \sum_i w_i^2 - 2\sum_i b_iw_i , \]
+and $h$ is Lipschitz on bounded sets and bounded in $C^2$ on compact sets avoiding the anchors.
+
+(i) The Hessian of $\|x - a_i\|$ is $(I - u_iu_i^\top)/w_i$, positive semidefinite with kernel spanned by $u_i$, so
+$\nabla^2F(x)$ is positive definite unless the three $u_i$ are parallel, which happens only on a line through all three
+anchors. On a segment at most two of the distances are affine, so $F$ is strictly convex; it is coercive, so $x_F$ is
+unique. The subdifferential of $F$ at $a_i$ is $\sum_{j \ne i}u_{ij}$ plus the closed unit disc, so $x_F = a_i$ exactly
+when $|\sum_{j \ne i}u_{ij}| \le 1$; as $|u_{ij} + u_{ik}| = 2\cos(\gamma_i/2)$ for the angle $\gamma_i$ at $a_i$, this is
+$\gamma_i \ge 120^\circ$. If every angle is below $120^\circ$, then $\nabla F(x_F) = 0$ and $\nabla^2F(x_F) \succ 0$. On a closed
+disc $B$ about $x_F$ avoiding the anchors, $\nabla S/2R = -\nabla F + O(1/R)$ in $C^1$, so for large $R$ $\nabla S$ has exactly
+one zero $x_R$ in $B$, with $x_R - x_F = O(1/R)$, and $\nabla^2S(x_R)/2R = -\nabla^2F(x_F) + o(1)$ is negative definite. As
+$\nabla F(x_F) = 0$, $F(x_R) = F(x_F) + O(R^{-2})$, so $S(x_R) - S(a_i) = 2R(F(a_i) - F(x_F)) + O(1) > 0$. At the anchors,
+$r_i/R \to 1$ and $v_i/R \to -\sum_{j \ne i}u_{ij}$, so the test of Remark~\ref{rem:three} becomes
+$1 > |\sum_{j \ne i}u_{ij}|$ in the limit: it fails strictly where the angle is below $120^\circ$ and holds strictly where it
+exceeds $120^\circ$. Finally, on a fixed disc around the anchors, $\nabla S/2R = -\nabla F + O(1/R)$ away from the anchors,
+$\nabla F$ vanishes only at $x_F$, and near $a_i$, $\nabla F = u_i + \sum_{j \ne i}u_j$ with $\bigl||\sum_{j \ne i}u_j| - 1\bigr|$
+bounded below, so $|\nabla F| \ge \eta > 0$ there while $|\nabla h|/2R = O(1/R)$. So $x_R$ is the only smooth critical point
+near the anchors when every angle is below $120^\circ$, and there is none when one exceeds it.
+
+(ii) Write $x = (R + s)\varphi$ with $|\varphi| = 1$. For a fixed $M_0 \le |x| \le (1 - \eta)R$ all residuals $e_i$ are
+negative, and for $|x| \ge (1 + \eta)R$ all are positive; since $\partial_s w_i > 0$ there, $\partial_sS = 2\sum_i e_i\partial_sw_i
+\ne 0$. In the annulus $(1 - \eta)R \le |x| \le (1 + \eta)R$, $w_i = R + s - \varphi\cdot a_i + O(1/R)$ and
+$r_i = R - \theta\cdot a_i + O(1/R)$, so $e_i = s + (\theta - \varphi)\cdot a_i + O(1/R)$, and $\partial_s^2S \ge 5$ for small
+$\eta$ and large $R$. So $\partial_sS = 0$ defines $s^*(\varphi)$ uniquely, and the critical points of $S$ there are those of
+$\varphi \mapsto S((R + s^*(\varphi))\varphi)$, which converges in $C^2$ of the circle to
+$\min_s\sum_i(s + (\theta - \varphi)\cdot a_i)^2 = G_\theta(\varphi)$. Non-degenerate critical points persist one-to-one, with
+the radial direction a minimum. On the circle, $G_\theta(\varphi) = \varphi^\top M\varphi - 2(M\theta)^\top\varphi + \mathrm{const}$,
+whose critical points solve $(M - \mu I)\varphi = M\theta$, $|\varphi| = 1$; there are four exactly when $M\theta$ lies
+inside the astroid $|c_1|^{2/3} + |c_2|^{2/3} = (\lambda_1 - \lambda_2)^{2/3}$, the evolute of the corresponding ellipse, and
+two otherwise. The left side of the stated inequality is smallest at $\theta$ along the second eigenvector, where it is
+$\lambda_2^{2/3}$, so four needs $\lambda_1 > 2\lambda_2$.
+
+(iii) By (i) and (ii) the critical points are $x^*$, one saddle and $x_R$. At an anchor where the test fails, the
+directional derivative $-2(r_i - v_i\cdot\vartheta)$ is negative on an open arc of directions and positive on the
+complementary arc, so a vector field decreasing $S$ can be built near it as near a regular point, and the sublevel sets
+change topology only at the three critical depths: an arc around $x^*$, a ring once the two ends meet at the saddle, and
+a disc once the ring closes at $x_R$. Finally $S(x_F) = \sum_i(r_i - \|x_F - a_i\|)^2$, $\nabla S(x_F) = O(1)$ and
+$x_R - x_F = O(1/R)$ give $S(x_R) = S(x_F) + O(1/R)$.
+\end{proof}
+
+\begin{proof}[Proof of Proposition~\ref{prop:birth}]
+Here $r_1 = R + 1$, $r_2 = r_3 = (R^2 - R + 1)^{1/2}$, $\|a_1 - a_j\| = \sqrt3$ and $u_{12} + u_{13} = (0, \sqrt3)$, so
+$v_1 = (\sqrt3 - r_2)(0, \sqrt3)$ and, for $R \ge 2$, where $r_2 \ge \sqrt3$, $|v_1| = \sqrt3\,r_2 - 3$. The test
+$r_1 > |v_1|$ reads $(R + 4)^2 > 3(R^2 - R + 1)$, that is, $(2R - 13)(R + 1) < 0$. For the other two anchors the test
+$r_2 > |v_2|$ changes sign once on $[2, \infty)$, at $R = 2.7227$ (computed).
+
+On the axis put $x = (0, t)$, $-\frac12 < t < 1$. Then $w_1 = 1 - t$, $w_2 = w_3 = g(t) = (t^2 + t + 1)^{1/2}$, and
+$f(t) = S(0, t)$ has $f'(t)/2 = k(t) = 3t + R + 1 - r_2h(t)$ with $h = (2t + 1)/g$. Since $h' = \frac32 g^{-3} > 0$ and
+$h'' = -\frac94(2t + 1)g^{-5} < 0$, $k$ is convex, and $k(-\frac12) = R - \frac12 > 0$, $k(1) = R + 4 - \sqrt3\,r_2$, which
+is positive for $R < 13/2$ and negative beyond. A double zero needs $k = k' = 0$. With $u = 2t + 1$ and $V = 2R - 1$,
+$k' = 0$ is $g^3 = r_2/2$, and then $k = 0$ is $u^3 = V$; since $g^2 = (u^2 + 3)/4$ and $r_2^2 = (V^2 + 3)/4$, with
+$q = V^{2/3}$ this gives $(q + 3)^3 = 4(q^3 + 3)$, that is, $(q + 1)^2(q - 5) = 0$. So the only double zero is at
+$R_0 = (1 + 5\sqrt5)/2$, $t_0 = (\sqrt5 - 1)/2$, where $g = \sqrt2$ and $r_2 = 4\sqrt2$; it is a non-degenerate fold, since
+$k''(t_0) > 0$ and $\partial_Rk(t_0) = -\frac9{16}$. The number of zeros of $k$ can change only at a double zero or when a
+zero crosses an end of the interval, and $k > 0$ on the whole interval at $R = 2$; so $k$ has no zero for
+$2 \le R < R_0$, two zeros $t_1 < t_2$ for $R_0 < R < 13/2$, and, since $k(1) < 0$ beyond, exactly one for $R > 13/2$, where
+$t_2$ has left through $t = 1$, the anchor $a_1$. At $t_1$, $f$ has a local maximum, and at $t_2$ a local minimum. Across
+the axis,
+\[ \partial_x^2S(0, t) = 2\Bigl[1 - \frac{r_1}{w_1} + 2\Bigl(\frac{3}{4g^2} + (g - r_2)\frac{(t + \frac12)^2}{g^3}\Bigr)\Bigr]
+   < 2\Bigl[3 - \frac{R + 1}{1 - t}\Bigr] < 0 \]
+for $R \ge 7/2$, since $g \le \sqrt3 \le r_2$ and $1 - t < \frac32$. So $t_1$ is a strict local maximum of $S$ and $t_2$ a saddle.
+As $R \to \infty$, $k/R \to 1 - h$, whose zero on the interval is $t = 0$, the centre.
+\end{proof}
+
 \section{A two-variable Laplace lemma}\label{app:laplace2}
 
 \begin{lemma}\label{lem:laplace2}

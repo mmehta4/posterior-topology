@@ -30,6 +30,10 @@ paper:           ## every number, table and figure in paper/full/main.tex, then 
 	$(PY) scripts/three_range_smooth_max_search.py
 	$(PY) scripts/three_range_fermat_example.py
 	$(PY) scripts/three_range_fermat_hole.py
+	$(PY) scripts/three_range_phase_scan.py
+	$(PY) scripts/three_range_max_count.py
+	$(PY) scripts/stage6b_check.py
+	$(PY) scripts/stage6b_levels.py
 	$(PY) scripts/nranges_check.py
 	$(PY) scripts/unequal_noise_check.py
 	$(PY) scripts/unequal_noise_classification.py

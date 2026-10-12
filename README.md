@@ -25,15 +25,17 @@ Python 3.9 or later; the pinned versions are in `requirements.txt` (mpmath 1.4.1
 | Proposition 4.4, independent topology check (536/536, 28/28) | `scripts/validate_topology.py` | `topology_validation.json` |
 | Lemma 4.6, inconsistent data | `scripts/inconsistent_data_check.py`, `scripts/inconsistent_data_check_fine.py` | printed |
 | Remark 4.7, the three-range hole interval | `scripts/three_range_hole.py` | `three_range_hole.json` |
-| Remark 4.7, smooth local maxima of S (search, the x* = (0, −8) example, its hole) | `scripts/three_range_smooth_max_search.py`, `scripts/three_range_fermat_example.py`, `scripts/three_range_fermat_hole.py` | printed |
-| Theorem 4.9, the n = d = 3 example | `scripts/nranges_check.py` | printed |
-| Theorem 4.11 and Corollary 4.12, unequal noise | `scripts/unequal_noise_check.py`, `scripts/unequal_noise_classification.py` | printed |
+| §4.5, three ranges in the plane: search for smooth maxima, the x* = (0, −8) example and its hole | `scripts/three_range_smooth_max_search.py`, `scripts/three_range_fermat_example.py`, `scripts/three_range_fermat_hole.py` | printed |
+| §4.5: where a smooth maximum exists (Figure 11(a)); at most one at a time | `scripts/three_range_phase_scan.py`, `scripts/three_range_max_count.py` | `three_range_phase_scan.npz` |
+| Theorem 4.8 and Proposition 4.9: Fermat limit, far critical points, the ring and hole noise levels | `scripts/stage6b_check.py`, `scripts/stage6b_levels.py` | printed |
+| Theorem 4.11, the n = d = 3 example | `scripts/nranges_check.py` | printed |
+| Theorem 4.13 and Corollary 4.14, unequal noise | `scripts/unequal_noise_check.py`, `scripts/unequal_noise_classification.py` | printed |
 | Theorem 5.4, the unequal-noise certificate | `scripts/unequal_certificate_check.py` | printed |
-| Corollary 6.4 and Figure 11 | `scripts/large_d_next_order.py` | `large_d_next_order.json` |
+| Corollary 6.4 and Figure 13 | `scripts/large_d_next_order.py` | `large_d_next_order.json` |
 | Theorem 7.3, geometry of random anchors | `scripts/sqrt_law_geometry_check.py` | printed |
 | Theorem 7.3 and Conjecture 7.4, the failure probability | `scripts/flip_sqrt_law.py` | `flip_sqrt_law.json` |
 | Table 3, coverage | `scripts/coverage.py` | `coverage.json` |
-| Figures 1–13 | `scripts/paper_figures.py` (after `exact_thresholds.py`) | `paper/full/figs/` |
+| Figures 1–14 | `scripts/paper_figures.py` (after `exact_thresholds.py`; Figure 11 needs `three_range_phase_scan.py`) | `paper/full/figs/` |
 
 The library is in `ptopo/`: `exact.py` (two-range quadrature in residual coordinates), `radial.py` (one range, 60-digit
 arithmetic), `topology.py` (Betti numbers on grids, with a GUDHI cross-check). Tests are in `tests/`.
