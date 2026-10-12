@@ -1,0 +1,5083 @@
+{
+ "alpha": 0.05,
+ "method": "exact quadrature in residual coordinates (ptopo.exact)",
+ "ladders": [
+  {
+   "theta": 15,
+   "d": 2,
+   "r": 7.66129757554039,
+   "rungs": [
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5576780275487834
+    },
+    {
+     "depth": 44.3728853899,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 4.761393941059639
+    },
+    {
+     "depth": 45.3728853899,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 4.8137140353169325
+    }
+   ]
+  },
+  {
+   "theta": 15,
+   "d": 3,
+   "r": 7.66129757554039,
+   "rungs": [
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.6123804069462866
+    },
+    {
+     "depth": 44.3728853899,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 4.285669405053571
+    },
+    {
+     "depth": 45.3728853899,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 4.327604301551423
+    }
+   ]
+  },
+  {
+   "theta": 15,
+   "d": 4,
+   "r": 7.66129757554039,
+   "rungs": [
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.6353144688716504
+    },
+    {
+     "depth": 44.3728853899,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 3.9540594908913915
+    },
+    {
+     "depth": 45.3728853899,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 3.9919131993804062
+    }
+   ]
+  },
+  {
+   "theta": 15,
+   "d": 6,
+   "r": 7.66129757554039,
+   "rungs": [
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.6466516338523176
+    },
+    {
+     "depth": 44.3728853899,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 3.502047727467214
+    },
+    {
+     "depth": 45.3728853899,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 3.534738675065991
+    }
+   ]
+  },
+  {
+   "theta": 15,
+   "d": 10,
+   "r": 7.66129757554039,
+   "rungs": [
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.6245721266474404
+    },
+    {
+     "depth": 44.3728853899,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 2.966026110060941
+    },
+    {
+     "depth": 45.3728853899,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 2.9930058017545713
+    }
+   ]
+  },
+  {
+   "theta": 20,
+   "d": 2,
+   "r": 5.758770483143634,
+   "rungs": [
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5582478719552099
+    },
+    {
+     "depth": 22.645896511239,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 3.399391768731562
+    },
+    {
+     "depth": 23.645896511239,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 3.474100478628721
+    }
+   ]
+  },
+  {
+   "theta": 20,
+   "d": 3,
+   "r": 5.758770483143634,
+   "rungs": [
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.6116563863913008
+    },
+    {
+     "depth": 22.645896511239,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 3.071492882781137
+    },
+    {
+     "depth": 23.645896511239,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 3.1304533722037315
+    }
+   ]
+  },
+  {
+   "theta": 20,
+   "d": 4,
+   "r": 5.758770483143634,
+   "rungs": [
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.6315709998465237
+    },
+    {
+     "depth": 22.645896511239,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 2.837891242167428
+    },
+    {
+     "depth": 23.645896511239,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 2.891024987165928
+    }
+   ]
+  },
+  {
+   "theta": 20,
+   "d": 6,
+   "r": 5.758770483143634,
+   "rungs": [
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.6340106346353065
+    },
+    {
+     "depth": 22.645896511239,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 2.5172739815563094
+    },
+    {
+     "depth": 23.645896511239,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 2.5631161841186607
+    }
+   ]
+  },
+  {
+   "theta": 20,
+   "d": 10,
+   "r": 5.758770483143634,
+   "rungs": [
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5970388067314364
+    },
+    {
+     "depth": 22.645896511239,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 2.1349093325534114
+    },
+    {
+     "depth": 23.645896511239,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 2.172714548553227
+    }
+   ]
+  },
+  {
+   "theta": 25,
+   "d": 2,
+   "r": 4.620226315345299,
+   "rungs": [
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5589795593961632
+    },
+    {
+     "depth": 13.106038574319,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 2.576979818628736
+    },
+    {
+     "depth": 14.106038574319,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 2.6770267044042617
+    }
+   ]
+  },
+  {
+   "theta": 25,
+   "d": 3,
+   "r": 4.620226315345299,
+   "rungs": [
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.6107481754815394
+    },
+    {
+     "depth": 13.106038574319,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 2.3411480799153295
+    },
+    {
+     "depth": 14.106038574319,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 2.418946898749979
+    }
+   ]
+  },
+  {
+   "theta": 25,
+   "d": 4,
+   "r": 4.620226315345299,
+   "rungs": [
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.6270559515616112
+    },
+    {
+     "depth": 13.106038574319,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 2.167067635627262
+    },
+    {
+     "depth": 14.106038574319,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 2.2370126012414255
+    }
+   ]
+  },
+  {
+   "theta": 25,
+   "d": 6,
+   "r": 4.620226315345299,
+   "rungs": [
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.6204832623710456
+    },
+    {
+     "depth": 13.106038574319,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 1.9258113663191312
+    },
+    {
+     "depth": 14.106038574319,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 1.986076136661813
+    }
+   ]
+  },
+  {
+   "theta": 25,
+   "d": 10,
+   "r": 4.620226315345299,
+   "rungs": [
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5726172618555472
+    },
+    {
+     "depth": 13.106038574319,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 1.6359569804261027
+    },
+    {
+     "depth": 14.106038574319,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 1.6856072108776194
+    }
+   ]
+  },
+  {
+   "theta": 30,
+   "d": 2,
+   "r": 3.8637033051562737,
+   "rungs": [
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5598676269120675
+    },
+    {
+     "depth": 8.200796619963,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 2.0234465611923955
+    },
+    {
+     "depth": 9.200796619963,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 2.1521003323445687
+    }
+   ]
+  },
+  {
+   "theta": 30,
+   "d": 3,
+   "r": 3.8637033051562737,
+   "rungs": [
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.6096713946575295
+    },
+    {
+     "depth": 8.200796619963,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 1.8524469519774396
+    },
+    {
+     "depth": 9.200796619963,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 1.9510688019623443
+    }
+   ]
+  },
+  {
+   "theta": 30,
+   "d": 4,
+   "r": 3.8637033051562737,
+   "rungs": [
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.6219376469435254
+    },
+    {
+     "depth": 8.200796619963,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 1.7187876163839886
+    },
+    {
+     "depth": 9.200796619963,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 1.8071726559101777
+    }
+   ]
+  },
+  {
+   "theta": 30,
+   "d": 6,
+   "r": 3.8637033051562737,
+   "rungs": [
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.6068833395756025
+    },
+    {
+     "depth": 8.200796619963,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 1.5309417929542377
+    },
+    {
+     "depth": 9.200796619963,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 1.6069593081072877
+    }
+   ]
+  },
+  {
+   "theta": 30,
+   "d": 10,
+   "r": 3.8637033051562737,
+   "rungs": [
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5514089926211766
+    },
+    {
+     "depth": 8.200796619963,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 1.3030559679594305
+    },
+    {
+     "depth": 9.200796619963,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 1.3656069887494384
+    }
+   ]
+  },
+  {
+   "theta": 35,
+   "d": 2,
+   "r": 3.3255095234230416,
+   "rungs": [
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.560895146607192
+    },
+    {
+     "depth": 5.407994543531,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 1.6227943765831434
+    },
+    {
+     "depth": 6.407994543531,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 1.7835800754622215
+    }
+   ]
+  },
+  {
+   "theta": 35,
+   "d": 3,
+   "r": 3.3255095234230416,
+   "rungs": [
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.6084437569563522
+    },
+    {
+     "depth": 5.407994543531,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 1.5015995324555902
+    },
+    {
+     "depth": 6.407994543531,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 1.6231740235357397
+    }
+   ]
+  },
+  {
+   "theta": 35,
+   "d": 4,
+   "r": 3.3255095234230416,
+   "rungs": [
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.6163784998240992
+    },
+    {
+     "depth": 5.407994543531,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 1.397595279471179
+    },
+    {
+     "depth": 6.407994543531,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 1.5061072525401618
+    }
+   ]
+  },
+  {
+   "theta": 35,
+   "d": 6,
+   "r": 3.3255095234230416,
+   "rungs": [
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5937031976919073
+    },
+    {
+     "depth": 5.407994543531,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 1.248383151670725
+    },
+    {
+     "depth": 6.407994543531,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 1.3415041167293695
+    }
+   ]
+  },
+  {
+   "theta": 35,
+   "d": 10,
+   "r": 3.3255095234230416,
+   "rungs": [
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5330088735207471
+    },
+    {
+     "depth": 5.407994543531,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 1.0650308606517973
+    },
+    {
+     "depth": 6.407994543531,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 1.1415434318968325
+    }
+   ]
+  },
+  {
+   "theta": 40,
+   "d": 2,
+   "r": 2.9238044001630876,
+   "rungs": [
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5620096592090218
+    },
+    {
+     "depth": 3.701023370087,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 1.3171927910419041
+    },
+    {
+     "depth": 4.701023370087,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 1.5137075451175968
+    }
+   ]
+  },
+  {
+   "theta": 40,
+   "d": 3,
+   "r": 2.9238044001630876,
+   "rungs": [
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.6070850463781364
+    },
+    {
+     "depth": 3.701023370087,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 1.2367343706267042
+    },
+    {
+     "depth": 4.701023370087,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 1.383477657254478
+    }
+   ]
+  },
+  {
+   "theta": 40,
+   "d": 4,
+   "r": 2.9238044001630876,
+   "rungs": [
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.6105262105866499
+    },
+    {
+     "depth": 3.701023370087,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 1.1558074677558487
+    },
+    {
+     "depth": 4.701023370087,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 1.2861267748157943
+    }
+   ]
+  },
+  {
+   "theta": 40,
+   "d": 6,
+   "r": 2.9238044001630876,
+   "rungs": [
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5812019602444144
+    },
+    {
+     "depth": 3.701023370087,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 1.0360292287360782
+    },
+    {
+     "depth": 4.701023370087,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 1.1475685320994649
+    }
+   ]
+  },
+  {
+   "theta": 40,
+   "d": 10,
+   "r": 2.9238044001630876,
+   "rungs": [
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5169421694785314
+    },
+    {
+     "depth": 3.701023370087,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.8863137805195158
+    },
+    {
+     "depth": 4.701023370087,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.9778109335092051
+    }
+   ]
+  },
+  {
+   "theta": 45,
+   "d": 2,
+   "r": 2.613125929752753,
+   "rungs": [
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5630314561721491
+    },
+    {
+     "depth": 2.602175265241,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 1.0749266261488608
+    },
+    {
+     "depth": 3.602175265241,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 1.310457185165697
+    }
+   ]
+  },
+  {
+   "theta": 45,
+   "d": 3,
+   "r": 2.613125929752753,
+   "rungs": [
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.6056304938039094
+    },
+    {
+     "depth": 2.602175265241,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 1.029078121634804
+    },
+    {
+     "depth": 3.602175265241,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 1.2031986989101586
+    }
+   ]
+  },
+  {
+   "theta": 45,
+   "d": 4,
+   "r": 2.613125929752753,
+   "rungs": [
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.6045122159861035
+    },
+    {
+     "depth": 2.602175265241,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.966992324862137
+    },
+    {
+     "depth": 3.602175265241,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 1.1207035600125166
+    }
+   ]
+  },
+  {
+   "theta": 45,
+   "d": 6,
+   "r": 2.613125929752753,
+   "rungs": [
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5694898818251309
+    },
+    {
+     "depth": 2.602175265241,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.870532347685188
+    },
+    {
+     "depth": 3.602175265241,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 1.0016953142333016
+    }
+   ]
+  },
+  {
+   "theta": 45,
+   "d": 10,
+   "r": 2.613125929752753,
+   "rungs": [
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.502792800393925
+    },
+    {
+     "depth": 2.602175265241,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.7471687399099941
+    },
+    {
+     "depth": 3.602175265241,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.8545832001302888
+    }
+   ]
+  },
+  {
+   "theta": 50,
+   "d": 2,
+   "r": 2.3662015831524985,
+   "rungs": [
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5635523081762495
+    },
+    {
+     "depth": 1.866506765808,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.8776742462835768
+    },
+    {
+     "depth": 2.866506765808,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 1.154602631117409
+    }
+   ]
+  },
+  {
+   "theta": 50,
+   "d": 3,
+   "r": 2.3662015831524985,
+   "rungs": [
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.6042184767303863
+    },
+    {
+     "depth": 1.866506765808,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.8614097289669896
+    },
+    {
+     "depth": 2.866506765808,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 1.0650014244191068
+    }
+   ]
+  },
+  {
+   "theta": 50,
+   "d": 4,
+   "r": 2.3662015831524985,
+   "rungs": [
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5984552357043564
+    },
+    {
+     "depth": 1.866506765808,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.8153522821791694
+    },
+    {
+     "depth": 2.866506765808,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.9938441861021833
+    }
+   ]
+  },
+  {
+   "theta": 50,
+   "d": 6,
+   "r": 2.3662015831524985,
+   "rungs": [
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5585900575251883
+    },
+    {
+     "depth": 1.866506765808,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.7379366601192549
+    },
+    {
+     "depth": 2.866506765808,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.8897341394954776
+    }
+   ]
+  },
+  {
+   "theta": 50,
+   "d": 10,
+   "r": 2.3662015831524985,
+   "rungs": [
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.4902260224808341
+    },
+    {
+     "depth": 1.866506765808,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.635781642016531
+    },
+    {
+     "depth": 2.866506765808,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.7598979304868123
+    }
+   ]
+  },
+  {
+   "theta": 55,
+   "d": 2,
+   "r": 2.1656805702002004,
+   "rungs": [
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5637549905139234
+    },
+    {
+     "depth": 1.358811191742,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.7143106826836053
+    },
+    {
+     "depth": 2.358811191742,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 1.033808324611796
+    }
+   ]
+  },
+  {
+   "theta": 55,
+   "d": 3,
+   "r": 2.1656805702002004,
+   "rungs": [
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.6032826591295082
+    },
+    {
+     "depth": 1.358811191742,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.7226680726475843
+    },
+    {
+     "depth": 2.358811191742,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.9577350300217733
+    }
+   ]
+  },
+  {
+   "theta": 55,
+   "d": 4,
+   "r": 2.1656805702002004,
+   "rungs": [
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5924442633424498
+    },
+    {
+     "depth": 1.358811191742,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.6908490098775946
+    },
+    {
+     "depth": 2.358811191742,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.8952582190770688
+    }
+   ]
+  },
+  {
+   "theta": 55,
+   "d": 6,
+   "r": 2.1656805702002004,
+   "rungs": [
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5484784776040932
+    },
+    {
+     "depth": 1.358811191742,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.6294148024411435
+    },
+    {
+     "depth": 2.358811191742,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.8025816399490989
+    }
+   ]
+  },
+  {
+   "theta": 55,
+   "d": 10,
+   "r": 2.1656805702002004,
+   "rungs": [
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.47898002262582645
+    },
+    {
+     "depth": 1.358811191742,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.5446638239912943
+    },
+    {
+     "depth": 2.358811191742,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.686062525756935
+    }
+   ]
+  },
+  {
+   "theta": 60,
+   "d": 2,
+   "r": 2.0000000000000004,
+   "rungs": [
+    {
+     "depth": 1.0,
+     "events": [
+      "inner contact",
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5701103483286436
+    },
+    {
+     "depth": 2.0,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.9396636747010185
+    }
+   ]
+  },
+  {
+   "theta": 60,
+   "d": 3,
+   "r": 2.0000000000000004,
+   "rungs": [
+    {
+     "depth": 1.0,
+     "events": [
+      "inner contact",
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.603663251749566
+    },
+    {
+     "depth": 2.0,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.8738110728473398
+    }
+   ]
+  },
+  {
+   "theta": 60,
+   "d": 4,
+   "r": 2.0000000000000004,
+   "rungs": [
+    {
+     "depth": 1.0,
+     "events": [
+      "inner contact",
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5864213181641973
+    },
+    {
+     "depth": 2.0,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.8179521842874454
+    }
+   ]
+  },
+  {
+   "theta": 60,
+   "d": 6,
+   "r": 2.0000000000000004,
+   "rungs": [
+    {
+     "depth": 1.0,
+     "events": [
+      "inner contact",
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5391106652834221
+    },
+    {
+     "depth": 2.0,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.7340606080933835
+    }
+   ]
+  },
+  {
+   "theta": 60,
+   "d": 10,
+   "r": 2.0000000000000004,
+   "rungs": [
+    {
+     "depth": 1.0,
+     "events": [
+      "inner contact",
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.4688511951626824
+    },
+    {
+     "depth": 2.0,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.6278645380519084
+    }
+   ]
+  },
+  {
+   "theta": 65,
+   "d": 2,
+   "r": 1.8611589967035778,
+   "rungs": [
+    {
+     "depth": 0.741594817604,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.47983410667831405
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.583030982739409
+    },
+    {
+     "depth": 1.741594817604,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.8661148718056922
+    }
+   ]
+  },
+  {
+   "theta": 65,
+   "d": 3,
+   "r": 1.8611589967035778,
+   "rungs": [
+    {
+     "depth": 0.741594817604,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.5052841039164999
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.602374970449935
+    },
+    {
+     "depth": 1.741594817604,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.8078114895916244
+    }
+   ]
+  },
+  {
+   "theta": 65,
+   "d": 4,
+   "r": 1.8611589967035778,
+   "rungs": [
+    {
+     "depth": 0.741594817604,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.49764628688356316
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5800199012041672
+    },
+    {
+     "depth": 1.741594817604,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.7569508892904075
+    }
+   ]
+  },
+  {
+   "theta": 65,
+   "d": 6,
+   "r": 1.8611589967035778,
+   "rungs": [
+    {
+     "depth": 0.741594817604,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.46293346639107696
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5304495806634618
+    },
+    {
+     "depth": 1.741594817604,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.6797910075226089
+    }
+   ]
+  },
+  {
+   "theta": 65,
+   "d": 10,
+   "r": 1.8611589967035778,
+   "rungs": [
+    {
+     "depth": 0.741594817604,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.4049301563886495
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.4596805213326115
+    },
+    {
+     "depth": 1.741594817604,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.5816175787040786
+    }
+   ]
+  },
+  {
+   "theta": 70,
+   "d": 2,
+   "r": 1.7434467956210982,
+   "rungs": [
+    {
+     "depth": 0.552713137919,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.41898793722713107
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5912227074960842
+    },
+    {
+     "depth": 1.552713137919,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.8085902228682103
+    }
+   ]
+  },
+  {
+   "theta": 70,
+   "d": 3,
+   "r": 1.7434467956210982,
+   "rungs": [
+    {
+     "depth": 0.552713137919,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.43290817329885256
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5995780796706626
+    },
+    {
+     "depth": 1.552713137919,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.7557182915320806
+    }
+   ]
+  },
+  {
+   "theta": 70,
+   "d": 4,
+   "r": 1.7434467956210982,
+   "rungs": [
+    {
+     "depth": 0.552713137919,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.42592654345132985
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5736664316003609
+    },
+    {
+     "depth": 1.552713137919,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.7085850512073064
+    }
+   ]
+  },
+  {
+   "theta": 70,
+   "d": 6,
+   "r": 1.7434467956210982,
+   "rungs": [
+    {
+     "depth": 0.552713137919,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.3985160589242832
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5224511564642786
+    },
+    {
+     "depth": 1.552713137919,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.6365576034297342
+    }
+   ]
+  },
+  {
+   "theta": 70,
+   "d": 10,
+   "r": 1.7434467956210982,
+   "rungs": [
+    {
+     "depth": 0.552713137919,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.3504838287652796
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.45134275619689934
+    },
+    {
+     "depth": 1.552713137919,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.5446249177115543
+    }
+   ]
+  },
+  {
+   "theta": 75,
+   "d": 2,
+   "r": 1.6426796317045815,
+   "rungs": [
+    {
+     "depth": 0.413037109008,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.36543042723541674
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5975168727320188
+    },
+    {
+     "depth": 1.413037109008,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.7635463712928281
+    }
+   ]
+  },
+  {
+   "theta": 75,
+   "d": 3,
+   "r": 1.6426796317045815,
+   "rungs": [
+    {
+     "depth": 0.413037109008,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.37393186236741016
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.596154821264044
+    },
+    {
+     "depth": 1.413037109008,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.7144722518030093
+    }
+   ]
+  },
+  {
+   "theta": 75,
+   "d": 4,
+   "r": 1.6426796317045815,
+   "rungs": [
+    {
+     "depth": 0.413037109008,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.3668597506303236
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.567543493554304
+    },
+    {
+     "depth": 1.413037109008,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.6700778954482263
+    }
+   ]
+  },
+  {
+   "theta": 75,
+   "d": 6,
+   "r": 1.6426796317045815,
+   "rungs": [
+    {
+     "depth": 0.413037109008,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.34393904213855053
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5150568280764523
+    },
+    {
+     "depth": 1.413037109008,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.6019397292406726
+    }
+   ]
+  },
+  {
+   "theta": 75,
+   "d": 10,
+   "r": 1.6426796317045815,
+   "rungs": [
+    {
+     "depth": 0.413037109008,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.3037514380658409
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.4437381313844792
+    },
+    {
+     "depth": 1.413037109008,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.5148636855704752
+    }
+   ]
+  },
+  {
+   "theta": 80,
+   "d": 2,
+   "r": 1.5557238268604126,
+   "rungs": [
+    {
+     "depth": 0.30882897174,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.31722653339422496
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.6021434604535255
+    },
+    {
+     "depth": 1.30882897174,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.7282093537605597
+    }
+   ]
+  },
+  {
+   "theta": 80,
+   "d": 3,
+   "r": 1.5557238268604126,
+   "rungs": [
+    {
+     "depth": 0.30882897174,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.3236282569944746
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5924145991993782
+    },
+    {
+     "depth": 1.30882897174,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.6817082464241213
+    }
+   ]
+  },
+  {
+   "theta": 80,
+   "d": 4,
+   "r": 1.5557238268604126,
+   "rungs": [
+    {
+     "depth": 0.30882897174,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.31692670697800013
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5617056054095058
+    },
+    {
+     "depth": 1.30882897174,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.6392937429270775
+    }
+   ]
+  },
+  {
+   "theta": 80,
+   "d": 6,
+   "r": 1.5557238268604126,
+   "rungs": [
+    {
+     "depth": 0.30882897174,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.29733159178737334
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5082139990557112
+    },
+    {
+     "depth": 1.30882897174,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.5740841021346841
+    }
+   ]
+  },
+  {
+   "theta": 80,
+   "d": 10,
+   "r": 1.5557238268604126,
+   "rungs": [
+    {
+     "depth": 0.30882897174,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.2633807570337334
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.4367861207784662
+    },
+    {
+     "depth": 1.30882897174,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.49079005835590667
+    }
+   ]
+  },
+  {
+   "theta": 85,
+   "d": 2,
+   "r": 1.4801872329222612,
+   "rungs": [
+    {
+     "depth": 0.230579778662,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.27436407822002595
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.6052655099422299
+    },
+    {
+     "depth": 1.230579778662,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.700398629689461
+    }
+   ]
+  },
+  {
+   "theta": 85,
+   "d": 3,
+   "r": 1.4801872329222612,
+   "rungs": [
+    {
+     "depth": 0.230579778662,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.27997171958441647
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5885331109324763
+    },
+    {
+     "depth": 1.230579778662,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.6555854287152941
+    }
+   ]
+  },
+  {
+   "theta": 85,
+   "d": 4,
+   "r": 1.4801872329222612,
+   "rungs": [
+    {
+     "depth": 0.230579778662,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.27397762460081126
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5561712117887144
+    },
+    {
+     "depth": 1.230579778662,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.614575744650125
+    }
+   ]
+  },
+  {
+   "theta": 85,
+   "d": 6,
+   "r": 1.4801872329222612,
+   "rungs": [
+    {
+     "depth": 0.230579778662,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.2571531129584835
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5018783928572128
+    },
+    {
+     "depth": 1.230579778662,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.5515576306371685
+    }
+   ]
+  },
+  {
+   "theta": 85,
+   "d": 10,
+   "r": 1.4801872329222612,
+   "rungs": [
+    {
+     "depth": 0.230579778662,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.22829324328955297
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.4304209076743536
+    },
+    {
+     "depth": 1.230579778662,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.47121277649699744
+    }
+   ]
+  },
+  {
+   "theta": 90,
+   "d": 2,
+   "r": 1.4142135623730951,
+   "rungs": [
+    {
+     "depth": 0.171572875254,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.2365654170148671
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.6071035454547833
+    },
+    {
+     "depth": 1.171572875254,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.678421533387241
+    }
+   ]
+  },
+  {
+   "theta": 90,
+   "d": 3,
+   "r": 1.4142135623730951,
+   "rungs": [
+    {
+     "depth": 0.171572875254,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.24180415513651754
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5846240508633197
+    },
+    {
+     "depth": 1.171572875254,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.6346690807765415
+    }
+   ]
+  },
+  {
+   "theta": 90,
+   "d": 4,
+   "r": 1.4142135623730951,
+   "rungs": [
+    {
+     "depth": 0.171572875254,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.23663573064161064
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5509454810004185
+    },
+    {
+     "depth": 1.171572875254,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.5946339381146362
+    }
+   ]
+  },
+  {
+   "theta": 90,
+   "d": 6,
+   "r": 1.4142135623730951,
+   "rungs": [
+    {
+     "depth": 0.171572875254,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.22222205686113017
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.4960130977289294
+    },
+    {
+     "depth": 1.171572875254,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.5332463278667025
+    }
+   ]
+  },
+  {
+   "theta": 90,
+   "d": 10,
+   "r": 1.4142135623730951,
+   "rungs": [
+    {
+     "depth": 0.171572875254,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.19762180182714284
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.42458808009752663
+    },
+    {
+     "depth": 1.171572875254,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.45520656015550964
+    }
+   ]
+  },
+  {
+   "theta": 95,
+   "d": 2,
+   "r": 1.3563417049092568,
+   "rungs": [
+    {
+     "depth": 0.126979410658,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.2032931859851302
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.6079030255923183
+    },
+    {
+     "depth": 1.126979410658,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.6609697460834336
+    }
+   ]
+  },
+  {
+   "theta": 95,
+   "d": 3,
+   "r": 1.3563417049092568,
+   "rungs": [
+    {
+     "depth": 0.126979410658,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.2082806617265082
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5807655284046926
+    },
+    {
+     "depth": 1.126979410658,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.6178423893201332
+    }
+   ]
+  },
+  {
+   "theta": 95,
+   "d": 4,
+   "r": 1.3563417049092568,
+   "rungs": [
+    {
+     "depth": 0.126979410658,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.2039333753105539
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5460284436468437
+    },
+    {
+     "depth": 1.126979410658,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.5784632550567876
+    }
+   ]
+  },
+  {
+   "theta": 95,
+   "d": 6,
+   "r": 1.3563417049092568,
+   "rungs": [
+    {
+     "depth": 0.126979410658,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.19164217172885253
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.49058718116307354
+    },
+    {
+     "depth": 1.126979410658,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.5182821273328416
+    }
+   ]
+  },
+  {
+   "theta": 95,
+   "d": 10,
+   "r": 1.3563417049092568,
+   "rungs": [
+    {
+     "depth": 0.126979410658,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.1706716483404028
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.41924219315303696
+    },
+    {
+     "depth": 1.126979410658,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.4420499297533575
+    }
+   ]
+  },
+  {
+   "theta": 100,
+   "d": 2,
+   "r": 1.3054072893322786,
+   "rungs": [
+    {
+     "depth": 0.093273612377,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.1739907495206292
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.6079021326858944
+    },
+    {
+     "depth": 1.093273612377,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.6470424804354709
+    }
+   ]
+  },
+  {
+   "theta": 100,
+   "d": 3,
+   "r": 1.3054072893322786,
+   "rungs": [
+    {
+     "depth": 0.093273612377,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.17873398754943987
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5770129032339817
+    },
+    {
+     "depth": 1.093273612377,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.6042375987733134
+    }
+   ]
+  },
+  {
+   "theta": 100,
+   "d": 4,
+   "r": 1.3054072893322786,
+   "rungs": [
+    {
+     "depth": 0.093273612377,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.17514704524168656
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5414180984003265
+    },
+    {
+     "depth": 1.093273612377,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.5652808956921788
+    }
+   ]
+  },
+  {
+   "theta": 100,
+   "d": 6,
+   "r": 1.3054072893322786,
+   "rungs": [
+    {
+     "depth": 0.093273612377,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.16472690577959984
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.4855744613759229
+    },
+    {
+     "depth": 1.093273612377,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.5059877910951053
+    }
+   ]
+  },
+  {
+   "theta": 100,
+   "d": 10,
+   "r": 1.3054072893322786,
+   "rungs": [
+    {
+     "depth": 0.093273612377,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.14688766011186896
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.41434494939968547
+    },
+    {
+     "depth": 1.093273612377,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.4311788956765604
+    }
+   ]
+  },
+  {
+   "theta": 105,
+   "d": 2,
+   "r": 1.2604724140102646,
+   "rungs": [
+    {
+     "depth": 0.06784587846,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.14816168096323348
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.6073113581438929
+    },
+    {
+     "depth": 1.06784587846,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.6358755657087017
+    }
+   ]
+  },
+  {
+   "theta": 105,
+   "d": 3,
+   "r": 1.2604724140102646,
+   "rungs": [
+    {
+     "depth": 0.06784587846,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.15262768261767348
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5734060761566614
+    },
+    {
+     "depth": 1.06784587846,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.5931813409347468
+    }
+   ]
+  },
+  {
+   "theta": 105,
+   "d": 4,
+   "r": 1.2604724140102646,
+   "rungs": [
+    {
+     "depth": 0.06784587846,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.14971715627756702
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.537111597584675
+    },
+    {
+     "depth": 1.06784587846,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.5544774265267922
+    }
+   ]
+  },
+  {
+   "theta": 105,
+   "d": 6,
+   "r": 1.2604724140102646,
+   "rungs": [
+    {
+     "depth": 0.06784587846,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.1409429508934413
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.48095253767179463
+    },
+    {
+     "depth": 1.06784587846,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.4958344693591822
+    }
+   ]
+  },
+  {
+   "theta": 105,
+   "d": 10,
+   "r": 1.2604724140102646,
+   "rungs": [
+    {
+     "depth": 0.06784587846,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.12582620221085158
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.40986382513938224
+    },
+    {
+     "depth": 1.06784587846,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.4221516619545191
+    }
+   ]
+  },
+  {
+   "theta": 110,
+   "d": 2,
+   "r": 1.220774588761456,
+   "rungs": [
+    {
+     "depth": 0.048741419043,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.12538092407779747
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.6063056981498596
+    },
+    {
+     "depth": 1.048741419043,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.626883921213591
+    }
+   ]
+  },
+  {
+   "theta": 110,
+   "d": 3,
+   "r": 1.220774588761456,
+   "rungs": [
+    {
+     "depth": 0.048741419043,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.12952646174167617
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5699740539740642
+    },
+    {
+     "depth": 1.048741419043,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.5841512226291298
+    }
+   ]
+  },
+  {
+   "theta": 110,
+   "d": 4,
+   "r": 1.220774588761456,
+   "rungs": [
+    {
+     "depth": 0.048741419043,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.1272017876107827
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5331056952241549
+    },
+    {
+     "depth": 1.048741419043,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.545578322749049
+    }
+   ]
+  },
+  {
+   "theta": 110,
+   "d": 6,
+   "r": 1.220774588761456,
+   "rungs": [
+    {
+     "depth": 0.048741419043,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.11987053217533596
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.4767020568116047
+    },
+    {
+     "depth": 1.048741419043,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.4874086755524457
+    }
+   ]
+  },
+  {
+   "theta": 110,
+   "d": 10,
+   "r": 1.220774588761456,
+   "rungs": [
+    {
+     "depth": 0.048741419043,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.10713180707927894
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.40577102215931227
+    },
+    {
+     "depth": 1.048741419043,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.41462140448366147
+    }
+   ]
+  },
+  {
+   "theta": 115,
+   "d": 2,
+   "r": 1.1856890474341608,
+   "rungs": [
+    {
+     "depth": 0.034480422337,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.10528943736086198
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.6050275418307299
+    },
+    {
+     "depth": 1.034480422337,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.619620156752504
+    }
+   ]
+  },
+  {
+   "theta": 115,
+   "d": 3,
+   "r": 1.1856890474341608,
+   "rungs": [
+    {
+     "depth": 0.034480422337,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.10907446329598935
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5667379918010076
+    },
+    {
+     "depth": 1.034480422337,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.5767416346477329
+    }
+   ]
+  },
+  {
+   "theta": 115,
+   "d": 4,
+   "r": 1.1856890474341608,
+   "rungs": [
+    {
+     "depth": 0.034480422337,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.10724686542285806
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5293969261407542
+    },
+    {
+     "depth": 1.034480422337,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.5382137739720808
+    }
+   ]
+  },
+  {
+   "theta": 115,
+   "d": 6,
+   "r": 1.1856890474341608,
+   "rungs": [
+    {
+     "depth": 0.034480422337,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.10117549637452186
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.472806166321376
+    },
+    {
+     "depth": 1.034480422337,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.4803865436962987
+    }
+   ]
+  },
+  {
+   "theta": 115,
+   "d": 10,
+   "r": 1.1856890474341608,
+   "rungs": [
+    {
+     "depth": 0.034480422337,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.09051857171924389
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.4020426595824889
+    },
+    {
+     "depth": 1.034480422337,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.4083151865852908
+    }
+   ]
+  },
+  {
+   "theta": 120,
+   "d": 2,
+   "r": 1.1547005383792517,
+   "rungs": [
+    {
+     "depth": 0.023932256575,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.08758538532708576
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.6035892542087107
+    },
+    {
+     "depth": 1.023932256575,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.6137389102304152
+    }
+   ]
+  },
+  {
+   "theta": 120,
+   "d": 3,
+   "r": 1.1547005383792517,
+   "rungs": [
+    {
+     "depth": 0.023932256575,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.09097896413567884
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.563713305494473
+    },
+    {
+     "depth": 1.023932256575,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.5706370987242365
+    }
+   ]
+  },
+  {
+   "theta": 120,
+   "d": 4,
+   "r": 1.1547005383792517,
+   "rungs": [
+    {
+     "depth": 0.023932256575,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.08956571875633938
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5259816981173119
+    },
+    {
+     "depth": 1.023932256575,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.5320951072552523
+    }
+   ]
+  },
+  {
+   "theta": 120,
+   "d": 6,
+   "r": 1.1547005383792517,
+   "rungs": [
+    {
+     "depth": 0.023932256575,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.08458941484429079
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.46925010794366145
+    },
+    {
+     "depth": 1.023932256575,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.4745138130000959
+    }
+   ]
+  },
+  {
+   "theta": 120,
+   "d": 10,
+   "r": 1.1547005383792517,
+   "rungs": [
+    {
+     "depth": 0.023932256575,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.075755633041316
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.3986581447363939
+    },
+    {
+     "depth": 1.023932256575,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.4030176258548247
+    }
+   ]
+  },
+  {
+   "theta": 125,
+   "d": 2,
+   "r": 1.1273819468663424,
+   "rungs": [
+    {
+     "depth": 0.016226160387,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.0720154028962252
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.6020786891491291
+    },
+    {
+     "depth": 1.016226160387,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.6089721157761091
+    }
+   ]
+  },
+  {
+   "theta": 125,
+   "d": 3,
+   "r": 1.1273819468663424,
+   "rungs": [
+    {
+     "depth": 0.016226160387,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.07499802461422697
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.560911179736289
+    },
+    {
+     "depth": 1.016226160387,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.5655916802735947
+    }
+   ]
+  },
+  {
+   "theta": 125,
+   "d": 4,
+   "r": 1.1273819468663424,
+   "rungs": [
+    {
+     "depth": 0.016226160387,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.07392448773295571
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5228563623682942
+    },
+    {
+     "depth": 1.016226160387,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.5269964931216089
+    }
+   ]
+  },
+  {
+   "theta": 125,
+   "d": 6,
+   "r": 1.1273819468663424,
+   "rungs": [
+    {
+     "depth": 0.016226160387,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.06989514773650672
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.46602091366258924
+    },
+    {
+     "depth": 1.016226160387,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.4695903280526962
+    }
+   ]
+  },
+  {
+   "theta": 125,
+   "d": 10,
+   "r": 1.1273819468663424,
+   "rungs": [
+    {
+     "depth": 0.016226160387,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.06265593280023775
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.3955996789013883
+    },
+    {
+     "depth": 1.016226160387,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.3985582618067086
+    }
+   ]
+  },
+  {
+   "theta": 130,
+   "d": 2,
+   "r": 1.1033779189624917,
+   "rungs": [
+    {
+     "depth": 0.010686994129,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.0583669180444099
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.6005634956321919
+    },
+    {
+     "depth": 1.010686994129,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.6051096108018158
+    }
+   ]
+  },
+  {
+   "theta": 130,
+   "d": 3,
+   "r": 1.1033779189624917,
+   "rungs": [
+    {
+     "depth": 0.010686994129,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.06093100955453736
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5583396659909416
+    },
+    {
+     "depth": 1.010686994129,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.5614131937309443
+    }
+   ]
+  },
+  {
+   "theta": 130,
+   "d": 4,
+   "r": 1.1033779189624917,
+   "rungs": [
+    {
+     "depth": 0.010686994129,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.06013140532390992
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5200172815447998
+    },
+    {
+     "depth": 1.010686994129,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.5227408309667525
+    }
+   ]
+  },
+  {
+   "theta": 130,
+   "d": 6,
+   "r": 1.1033779189624917,
+   "rungs": [
+    {
+     "depth": 0.010686994129,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.05691618327523445
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.46310717616561825
+    },
+    {
+     "depth": 1.010686994129,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.465458083415311
+    }
+   ]
+  },
+  {
+   "theta": 130,
+   "d": 10,
+   "r": 1.1033779189624917,
+   "rungs": [
+    {
+     "depth": 0.010686994129,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.051067539691865976
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.3928518657938265
+    },
+    {
+     "depth": 1.010686994129,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.39480180468603865
+    }
+   ]
+  },
+  {
+   "theta": 135,
+   "d": 2,
+   "r": 1.082392200292394,
+   "rungs": [
+    {
+     "depth": 0.006788474669,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.04646170949731383
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5990956519616456
+    },
+    {
+     "depth": 1.006788474669,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.6019856340033425
+    }
+   ]
+  },
+  {
+   "theta": 135,
+   "d": 3,
+   "r": 1.082392200292394,
+   "rungs": [
+    {
+     "depth": 0.006788474669,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.04861124452311172
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5560044934652025
+    },
+    {
+     "depth": 1.006788474669,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.557951135285674
+    }
+   ]
+  },
+  {
+   "theta": 135,
+   "d": 4,
+   "r": 1.082392200292394,
+   "rungs": [
+    {
+     "depth": 0.006788474669,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.048028751260164315
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5174608978408826
+    },
+    {
+     "depth": 1.006788474669,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.5191889076016342
+    }
+   ]
+  },
+  {
+   "theta": 135,
+   "d": 6,
+   "r": 1.082392200292394,
+   "rungs": [
+    {
+     "depth": 0.006788474669,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.04550863272062009
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.46049887338433615
+    },
+    {
+     "depth": 1.006788474669,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.4619920316899128
+    }
+   ]
+  },
+  {
+   "theta": 135,
+   "d": 10,
+   "r": 1.082392200292394,
+   "rungs": [
+    {
+     "depth": 0.006788474669,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.04086692403953675
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.39040139918556943
+    },
+    {
+     "depth": 1.006788474669,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.39164062052349397
+    }
+   ]
+  },
+  {
+   "theta": 140,
+   "d": 2,
+   "r": 1.0641777724759123,
+   "rungs": [
+    {
+     "depth": 0.00411878648,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.0361506139491722
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5977143460222308
+    },
+    {
+     "depth": 1.00411878648,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.5994680429908474
+    }
+   ]
+  },
+  {
+   "theta": 140,
+   "d": 3,
+   "r": 1.0641777724759123,
+   "rungs": [
+    {
+     "depth": 0.00411878648,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.037900279929600274
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.553909674605735
+    },
+    {
+     "depth": 1.00411878648,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.5550874815369562
+    }
+   ]
+  },
+  {
+   "theta": 140,
+   "d": 4,
+   "r": 1.0641777724759123,
+   "rungs": [
+    {
+     "depth": 0.00411878648,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.03748670899154339
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.515183798942138
+    },
+    {
+     "depth": 1.00411878648,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.5162310973482619
+    }
+   ]
+  },
+  {
+   "theta": 140,
+   "d": 6,
+   "r": 1.0641777724759123,
+   "rungs": [
+    {
+     "depth": 0.00411878648,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.03555512820722954
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.4581872326339998
+    },
+    {
+     "depth": 1.00411878648,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.45909303273065744
+    }
+   ]
+  },
+  {
+   "theta": 140,
+   "d": 10,
+   "r": 1.0641777724759123,
+   "rungs": [
+    {
+     "depth": 0.00411878648,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.03195371429284149
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.3882368122108772
+    },
+    {
+     "depth": 1.00411878648,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.38898894635063314
+    }
+   ]
+  },
+  {
+   "theta": 145,
+   "d": 2,
+   "r": 1.0485291251408106,
+   "rungs": [
+    {
+     "depth": 0.002355075987,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.027309225187862805
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5964492376163751
+    },
+    {
+     "depth": 1.002355075987,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.5974513734409398
+    }
+   ]
+  },
+  {
+   "theta": 145,
+   "d": 3,
+   "r": 1.0485291251408106,
+   "rungs": [
+    {
+     "depth": 0.002355075987,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.028683382614209003
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5520579608453782
+    },
+    {
+     "depth": 1.002355075987,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.5527296768152331
+    }
+   ]
+  },
+  {
+   "theta": 145,
+   "d": 4,
+   "r": 1.0485291251408106,
+   "rungs": [
+    {
+     "depth": 0.002355075987,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.02839861410064898
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5131827790828231
+    },
+    {
+     "depth": 1.002355075987,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.5137810237071829
+    }
+   ]
+  },
+  {
+   "theta": 145,
+   "d": 6,
+   "r": 1.0485291251408106,
+   "rungs": [
+    {
+     "depth": 0.002355075987,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.02696010975886791
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.45616462416157544
+    },
+    {
+     "depth": 1.002355075987,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.45668245437328947
+    }
+   ]
+  },
+  {
+   "theta": 145,
+   "d": 10,
+   "r": 1.0485291251408106,
+   "rungs": [
+    {
+     "depth": 0.002355075987,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.024246579867521056
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.3863482753699819
+    },
+    {
+     "depth": 1.002355075987,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.3867784413285788
+    }
+   ]
+  },
+  {
+   "theta": 150,
+   "d": 2,
+   "r": 1.035276180410083,
+   "rungs": [
+    {
+     "depth": 0.001244408904,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.01983442398579527
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5953222164507551
+    },
+    {
+     "depth": 1.001244408904,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.5958509587199826
+    }
+   ]
+  },
+  {
+   "theta": 150,
+   "d": 3,
+   "r": 1.035276180410083,
+   "rungs": [
+    {
+     "depth": 0.001244408904,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.02086597806137156
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5504511875132456
+    },
+    {
+     "depth": 1.001244408904,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.5508052882449382
+    }
+   ]
+  },
+  {
+   "theta": 150,
+   "d": 4,
+   "r": 1.035276180410083,
+   "rungs": [
+    {
+     "depth": 0.001244408904,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.020677244450180765
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5114548933167286
+    },
+    {
+     "depth": 1.001244408904,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.5117707301040182
+    }
+   ]
+  },
+  {
+   "theta": 150,
+   "d": 6,
+   "r": 1.035276180410083,
+   "rungs": [
+    {
+     "depth": 0.001244408904,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.019646146645413698
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.4544244769439239
+    },
+    {
+     "depth": 1.001244408904,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.45469804445298106
+    }
+   ]
+  },
+  {
+   "theta": 150,
+   "d": 10,
+   "r": 1.035276180410083,
+   "rungs": [
+    {
+     "depth": 0.001244408904,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.017679976910483848
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.38472743349584404
+    },
+    {
+     "depth": 1.001244408904,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.38495476927688954
+    }
+   ]
+  },
+  {
+   "theta": 155,
+   "d": 2,
+   "r": 1.0242795143145091,
+   "rungs": [
+    {
+     "depth": 0.000589494815,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.013641596601200854
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5943492751180528
+    },
+    {
+     "depth": 1.000589494815,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.5945991330092364
+    }
+   ]
+  },
+  {
+   "theta": 155,
+   "d": 3,
+   "r": 1.0242795143145091,
+   "rungs": [
+    {
+     "depth": 0.000589494815,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.014370840087355658
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5490905355541789
+    },
+    {
+     "depth": 1.000589494815,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.549257934345971
+    }
+   ]
+  },
+  {
+   "theta": 155,
+   "d": 4,
+   "r": 1.0242795143145091,
+   "rungs": [
+    {
+     "depth": 0.000589494815,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.014251908259814901
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5099975040918658
+    },
+    {
+     "depth": 1.000589494815,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.5101470113253248
+    }
+   ]
+  },
+  {
+   "theta": 155,
+   "d": 6,
+   "r": 1.0242795143145091,
+   "rungs": [
+    {
+     "depth": 0.000589494815,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.01355104576496395
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.45296121171843456
+    },
+    {
+     "depth": 1.000589494815,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.4530907822611272
+    }
+   ]
+  },
+  {
+   "theta": 155,
+   "d": 10,
+   "r": 1.0242795143145091,
+   "rungs": [
+    {
+     "depth": 0.000589494815,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.012201564349983991
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.3833672743630005
+    },
+    {
+     "depth": 1.000589494815,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.3834749793506203
+    }
+   ]
+  },
+  {
+   "theta": 160,
+   "d": 2,
+   "r": 1.0154266118857451,
+   "rungs": [
+    {
+     "depth": 0.000237980354,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.00866242407025724
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5935418117617048
+    },
+    {
+     "depth": 1.000237980354,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.5936423222713558
+    }
+   ]
+  },
+  {
+   "theta": 160,
+   "d": 3,
+   "r": 1.0154266118857451,
+   "rungs": [
+    {
+     "depth": 0.000237980354,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.009135878150545148
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5479767299513009
+    },
+    {
+     "depth": 1.000237980354,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.5480441925696475
+    }
+   ]
+  },
+  {
+   "theta": 160,
+   "d": 4,
+   "r": 1.0154266118857451,
+   "rungs": [
+    {
+     "depth": 0.000237980354,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.009066157969312585
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5088083199865515
+    },
+    {
+     "depth": 1.000237980354,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.5088686404081126
+    }
+   ]
+  },
+  {
+   "theta": 160,
+   "d": 6,
+   "r": 1.0154266118857451,
+   "rungs": [
+    {
+     "depth": 0.000237980354,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.008625573947945674
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.45177018772170247
+    },
+    {
+     "depth": 1.000237980354,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.4518224877977146
+    }
+   ]
+  },
+  {
+   "theta": 160,
+   "d": 10,
+   "r": 1.0154266118857451,
+   "rungs": [
+    {
+     "depth": 0.000237980354,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.007770151127802764
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.38226202340359605
+    },
+    {
+     "depth": 1.000237980354,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.38230550766038984
+    }
+   ]
+  },
+  {
+   "theta": 165,
+   "d": 2,
+   "r": 1.0086289605801528,
+   "rungs": [
+    {
+     "depth": 7.4458961e-05,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.004843148424053906
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5929076487412477
+    },
+    {
+     "depth": 1.000074458961,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.59293894733093
+    }
+   ]
+  },
+  {
+   "theta": 165,
+   "d": 3,
+   "r": 1.0086289605801528,
+   "rungs": [
+    {
+     "depth": 7.4458961e-05,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.005112411765916419
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5471101890809522
+    },
+    {
+     "depth": 1.000074458961,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.5471312677183379
+    }
+   ]
+  },
+  {
+   "theta": 165,
+   "d": 4,
+   "r": 1.0086289605801528,
+   "rungs": [
+    {
+     "depth": 7.4458961e-05,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.005076007753330822
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.5078854269487202
+    },
+    {
+     "depth": 1.000074458961,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.5079042912126057
+    }
+   ]
+  },
+  {
+   "theta": 165,
+   "d": 6,
+   "r": 1.0086289605801528,
+   "rungs": [
+    {
+     "depth": 7.4458961e-05,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.004831673362108716
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.45084766065874204
+    },
+    {
+     "depth": 1.000074458961,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.45086402225694366
+    }
+   ]
+  },
+  {
+   "theta": 165,
+   "d": 10,
+   "r": 1.0086289605801528,
+   "rungs": [
+    {
+     "depth": 7.4458961e-05,
+     "events": [
+      "inner contact"
+     ],
+     "sigma": 0.004354075810722456
+    },
+    {
+     "depth": 1.0,
+     "events": [
+      "contact beyond a1",
+      "contact beyond a2"
+     ],
+     "sigma": 0.38140706036117533
+    },
+    {
+     "depth": 1.000074458961,
+     "events": [
+      "anchor a1",
+      "anchor a2"
+     ],
+     "sigma": 0.38142066639235483
+    }
+   ]
+  }
+ ],
+ "asym": [
+  {
+   "d": 2,
+   "rungs": [
+    {
+     "depth": 0.2440503807907114,
+     "event": "inner contact",
+     "sigma": 0.2820878805268047
+    },
+    {
+     "depth": 0.7501854999893469,
+     "event": "contact beyond a2",
+     "sigma": 0.5171581782189716
+    },
+    {
+     "depth": 0.9942358807800583,
+     "event": "anchor a2",
+     "sigma": 0.60869245288251
+    },
+    {
+     "depth": 1.2856555174621993,
+     "event": "contact beyond a1",
+     "sigma": 0.708131780030212
+    },
+    {
+     "depth": 1.5297058982529106,
+     "event": "anchor a1",
+     "sigma": 0.7898102995111924
+    }
+   ]
+  },
+  {
+   "d": 3,
+   "rungs": [
+    {
+     "depth": 0.2440503807907114,
+     "event": "inner contact",
+     "sigma": 0.2879344868901961
+    },
+    {
+     "depth": 0.7501854999893469,
+     "event": "contact beyond a2",
+     "sigma": 0.5076708898927071
+    },
+    {
+     "depth": 0.9942358807800583,
+     "event": "anchor a2",
+     "sigma": 0.5859045144701706
+    },
+    {
+     "depth": 1.2856555174621993,
+     "event": "contact beyond a1",
+     "sigma": 0.6691169026515875
+    },
+    {
+     "depth": 1.5297058982529106,
+     "event": "anchor a1",
+     "sigma": 0.7305647396011936
+    }
+   ]
+  }
+ ],
+ "table2": [
+  {
+   "case": 30,
+   "d": 2,
+   "exact": 0.5598676269119143,
+   "proved": 0.37388003308066237,
+   "ratio": 0.6678007713053323,
+   "escaping_mass_at_proved": 0.0012017643144980328
+  },
+  {
+   "case": 30,
+   "d": 3,
+   "exact": 0.6096713946575278,
+   "proved": 0.4672796882955556,
+   "ratio": 0.7664451578182403,
+   "escaping_mass_at_proved": 0.00798224994481378
+  },
+  {
+   "case": 30,
+   "d": 4,
+   "exact": 0.6219376469435235,
+   "proved": 0.39914661244927996,
+   "ratio": 0.6417791468499501,
+   "escaping_mass_at_proved": 0.0012536059405371391
+  },
+  {
+   "case": 30,
+   "d": 6,
+   "exact": 0.6068833395756018,
+   "proved": 0.3298721707342374,
+   "ratio": 0.5435512053517889,
+   "escaping_mass_at_proved": 7.057411224153931e-05
+  },
+  {
+   "case": 30,
+   "d": 10,
+   "exact": 0.5514089926211749,
+   "proved": 0.26455094911639554,
+   "ratio": 0.47977264182585694,
+   "escaping_mass_at_proved": 7.523779336215952e-07
+  },
+  {
+   "case": 60,
+   "d": 2,
+   "exact": 0.5701103483286437,
+   "proved": 0.3968307263992607,
+   "ratio": 0.6960595042040969,
+   "escaping_mass_at_proved": 0.0024065217965859587
+  },
+  {
+   "case": 60,
+   "d": 3,
+   "exact": 0.6036632517495651,
+   "proved": 0.42636856801308803,
+   "ratio": 0.7063020098993382,
+   "escaping_mass_at_proved": 0.0033342590361296054
+  },
+  {
+   "case": 60,
+   "d": 4,
+   "exact": 0.5864213181641966,
+   "proved": 0.3620109554038896,
+   "ratio": 0.6173222974518934,
+   "escaping_mass_at_proved": 0.00044451687522928385
+  },
+  {
+   "case": 60,
+   "d": 6,
+   "exact": 0.5391106652834348,
+   "proved": 0.29772082368483604,
+   "ratio": 0.5522443588243813,
+   "escaping_mass_at_proved": 2.0604638033328015e-05
+  },
+  {
+   "case": 60,
+   "d": 10,
+   "exact": 0.468851195162594,
+   "proved": 0.23772403691937435,
+   "ratio": 0.5070351518181232,
+   "escaping_mass_at_proved": 1.4360663447288147e-07
+  },
+  {
+   "case": 90,
+   "d": 2,
+   "exact": 0.23656541701437053,
+   "proved": 0.1565087376560592,
+   "ratio": 0.6615875626763815,
+   "escaping_mass_at_proved": 0.001096593287654879
+  },
+  {
+   "case": 90,
+   "d": 3,
+   "exact": 0.24180415513637452,
+   "proved": 0.1909431241958267,
+   "ratio": 0.7896602276670439,
+   "escaping_mass_at_proved": 0.008556085495199928
+  },
+  {
+   "case": 90,
+   "d": 4,
+   "exact": 0.236635730641483,
+   "proved": 0.16844221579524687,
+   "ratio": 0.7118207184461366,
+   "escaping_mass_at_proved": 0.0025260721405270248
+  },
+  {
+   "case": 90,
+   "d": 6,
+   "exact": 0.22222205686102506,
+   "proved": 0.14303356354716507,
+   "ratio": 0.6436515149196755,
+   "escaping_mass_at_proved": 0.00038535213596258
+  },
+  {
+   "case": 90,
+   "d": 10,
+   "exact": 0.1976218018271154,
+   "proved": 0.11701592120784508,
+   "ratio": 0.5921205055614948,
+   "escaping_mass_at_proved": 1.9566469998122393e-05
+  },
+  {
+   "case": 120,
+   "d": 2,
+   "exact": 0.08758538532553714,
+   "proved": 0.05490489085924978,
+   "ratio": 0.626872744296088,
+   "escaping_mass_at_proved": 0.00048150180871431303
+  },
+  {
+   "case": 120,
+   "d": 3,
+   "exact": 0.09097896413531595,
+   "proved": 0.07622715966385568,
+   "ratio": 0.8378547765226318,
+   "escaping_mass_at_proved": 0.014800527376383488
+  },
+  {
+   "case": 120,
+   "d": 4,
+   "exact": 0.08956571875602327,
+   "proved": 0.06848717904415402,
+   "ratio": 0.7646583982730365,
+   "escaping_mass_at_proved": 0.005979308688722207
+  },
+  {
+   "case": 120,
+   "d": 6,
+   "exact": 0.08458941484401453,
+   "proved": 0.05940205590603429,
+   "ratio": 0.7022398253442644,
+   "escaping_mass_at_proved": 0.0016367863387649617
+  },
+  {
+   "case": 120,
+   "d": 10,
+   "exact": 0.07575563304108292,
+   "proved": 0.049672390525075195,
+   "ratio": 0.6556923694128124,
+   "escaping_mass_at_proved": 0.00023994060704024545
+  },
+  {
+   "case": 150,
+   "d": 2,
+   "exact": 0.01983442399194472,
+   "proved": 0.011427634295259769,
+   "ratio": 0.5761515585176978,
+   "escaping_mass_at_proved": 0.00010841337752753866
+  },
+  {
+   "case": 150,
+   "d": 3,
+   "exact": 0.020865978064559636,
+   "proved": 0.018236294193209057,
+   "ratio": 0.873972652361931,
+   "escaping_mass_at_proved": 0.02088837700845292
+  },
+  {
+   "case": 150,
+   "d": 4,
+   "exact": 0.020677244452931644,
+   "proved": 0.01654077890428289,
+   "ratio": 0.7999508320335073,
+   "escaping_mass_at_proved": 0.009674799835225123
+  },
+  {
+   "case": 150,
+   "d": 6,
+   "exact": 0.019646146647812127,
+   "proved": 0.014530393911417203,
+   "ratio": 0.7396052860592571,
+   "escaping_mass_at_proved": 0.0034798282963204308
+  },
+  {
+   "case": 150,
+   "d": 10,
+   "exact": 0.01767997691251412,
+   "proved": 0.01233869210522957,
+   "ratio": 0.6978907362993264,
+   "escaping_mass_at_proved": 0.0008635017198728168
+  },
+  {
+   "case": "asym",
+   "d": 2,
+   "exact": 0.2820878805268047,
+   "proved": 0.19024617243980013,
+   "ratio": 0.6744216450721372,
+   "escaping_mass_at_proved": 0.0013999820688949116
+  },
+  {
+   "case": "asym",
+   "d": 3,
+   "exact": 0.2879344868901961,
+   "proved": 0.22416748085044766,
+   "ratio": 0.7785364069151397,
+   "escaping_mass_at_proved": 0.00741858083977609
+  }
+ ],
+ "large_d": [
+  {
+   "theta": 65,
+   "d": 10,
+   "sigma_scaled": 0.6880130014381082
+  },
+  {
+   "theta": 65,
+   "d": 40,
+   "sigma_scaled": 0.852509155540951
+  },
+  {
+   "theta": 65,
+   "d": 160,
+   "sigma_scaled": 0.9566286294968632
+  },
+  {
+   "theta": 65,
+   "d": 640,
+   "sigma_scaled": 1.0162898935782219
+  },
+  {
+   "theta": 65,
+   "d": 2560,
+   "sigma_scaled": 1.0483670667536438
+  },
+  {
+   "theta": 75,
+   "d": 10,
+   "sigma_scaled": 0.5847435910816938
+  },
+  {
+   "theta": 75,
+   "d": 40,
+   "sigma_scaled": 0.7331724793090794
+  },
+  {
+   "theta": 75,
+   "d": 160,
+   "sigma_scaled": 0.8263874160537336
+  },
+  {
+   "theta": 75,
+   "d": 640,
+   "sigma_scaled": 0.8796136041674751
+  },
+  {
+   "theta": 75,
+   "d": 2560,
+   "sigma_scaled": 0.9081794018457213
+  },
+  {
+   "theta": 90,
+   "d": 10,
+   "sigma_scaled": 0.4418957827212734
+  },
+  {
+   "theta": 90,
+   "d": 40,
+   "sigma_scaled": 0.5623200779483947
+  },
+  {
+   "theta": 90,
+   "d": 160,
+   "sigma_scaled": 0.6380740948426428
+  },
+  {
+   "theta": 90,
+   "d": 640,
+   "sigma_scaled": 0.6812242659227274
+  },
+  {
+   "theta": 90,
+   "d": 2560,
+   "sigma_scaled": 0.7043377972551388
+  },
+  {
+   "theta": 105,
+   "d": 10,
+   "sigma_scaled": 0.31567322211370247
+  },
+  {
+   "theta": 105,
+   "d": 40,
+   "sigma_scaled": 0.40591080100163596
+  },
+  {
+   "theta": 105,
+   "d": 160,
+   "sigma_scaled": 0.4633428249552974
+  },
+  {
+   "theta": 105,
+   "d": 640,
+   "sigma_scaled": 0.49612345179318756
+  },
+  {
+   "theta": 105,
+   "d": 2560,
+   "sigma_scaled": 0.5136831568982376
+  },
+  {
+   "theta": 120,
+   "d": 10,
+   "sigma_scaled": 0.20746534537342104
+  },
+  {
+   "theta": 120,
+   "d": 40,
+   "sigma_scaled": 0.26875554030058685
+  },
+  {
+   "theta": 120,
+   "d": 160,
+   "sigma_scaled": 0.30825635500553705
+  },
+  {
+   "theta": 120,
+   "d": 640,
+   "sigma_scaled": 0.3309192143850678
+  },
+  {
+   "theta": 120,
+   "d": 2560,
+   "sigma_scaled": 0.343084219906964
+  },
+  {
+   "theta": 135,
+   "d": 10,
+   "sigma_scaled": 0.11939531797752725
+  },
+  {
+   "theta": 135,
+   "d": 40,
+   "sigma_scaled": 0.15549377422946972
+  },
+  {
+   "theta": 135,
+   "d": 160,
+   "sigma_scaled": 0.17899270391919525
+  },
+  {
+   "theta": 135,
+   "d": 640,
+   "sigma_scaled": 0.19255850077724262
+  },
+  {
+   "theta": 135,
+   "d": 2560,
+   "sigma_scaled": 0.19986408038263576
+  },
+  {
+   "theta": 150,
+   "d": 10,
+   "sigma_scaled": 0.05400394318025409
+  },
+  {
+   "theta": 150,
+   "d": 40,
+   "sigma_scaled": 0.07058845847375463
+  },
+  {
+   "theta": 150,
+   "d": 160,
+   "sigma_scaled": 0.081459605742877
+  },
+  {
+   "theta": 150,
+   "d": 640,
+   "sigma_scaled": 0.08777049034099861
+  },
+  {
+   "theta": 150,
+   "d": 2560,
+   "sigma_scaled": 0.09118042450034333
+  }
+ ]
+}

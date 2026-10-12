@@ -1,0 +1,29 @@
+# personal working material, not part of the public release
+docs/
+theory/
+tracker/
+interactive/
+paper/floor/
+paper/main.tex
+paper/refs.bib
+scripts/build_web.py
+results/figures/
+results/*.log
+venv.nosync
+# build products
+paper/full/*.pdf
+paper/full/*.log
+paper/full/*.aux
+paper/full/*.bbl
+paper/full/*.blg
+paper/full/*.out
+paper/full/aos/*.pdf
+paper/full/aos/*.log
+paper/full/aos/*.aux
+paper/full/aos/*.bbl
+paper/full/aos/*.blg
+paper/full/aos/*.out
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store
