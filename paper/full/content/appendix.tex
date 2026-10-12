@@ -1,0 +1,67 @@
+\section{Proof of Theorem~\ref{thm:sqrtlaw}}\label{app:sqrt}
+
+Throughout, $C$ and $c$ denote positive constants that depend only on $\alpha$, and \emph{fail} is the event that the
+region is not exactly two pieces.
+
+\paragraph{Decomposition} Put $a_- = a_1 - a_2 \sim N(0, 2I)$ and $a_+ = (a_1 + a_2)/2 \sim N(0, I/2)$, which are independent.
+Let $D = |a_-|$, let $\vartheta$ be a unit vector orthogonal to $a_-$, and put $\xi_0 = a_+\cdot a_-/D$ and
+$h_0 = |a_+\cdot\vartheta|$. Given $a_-$, $a_+\cdot a_-/D$ and $a_+\cdot\vartheta$ are independent $N(0, 1/2)$ variables, so
+$h_0 \sim |N(0, 1/2)|$, with density at most $2/\sqrt\pi$, and $D$, $\xi_0$, $h_0$ are independent. The anchor line is
+$\{a_+ + \lambda a_-\}$, so $h_0$ is the distance from $x^* = 0$ to it, the height of the noise-free triangle, and the
+noise-free ranges are $((\xi_0 \pm D/2)^2 + h_0^2)^{1/2}$. Let $T$ be the noise-free triangle, $s$ its semiperimeter and
+$t_{\min}$ its smallest tangent length, and let $s_0 = \max(D, |\xi_0| + D/2) \le D + |\xi_0|$ be the semiperimeter at
+$h_0 = 0$, so that $s \le s_0 + h_0$.
+
+\paragraph{Geometry} Let $\theta$ be the largest angle of $T$, at a vertex with adjacent sides $p, q$. The tangent length
+at a vertex of angle $\phi$ is $r_{\mathrm{in}}\cot(\phi/2)$, with inradius $r_{\mathrm{in}} = Dh_0/2s$, so
+$t_{\min} = r_{\mathrm{in}}\cot(\theta/2)$, and $\sin\theta = Dh_0/pq$ with $pq \le s^2$. If $\theta \ge \pi/2$,
+$\cot(\theta/2) = \sin\theta/(1 - \cos\theta) \ge \sin\theta/2 \ge Dh_0/2s^2$; if $\theta < \pi/2$,
+$\cot(\theta/2) \ge 1 \ge h_0/s$. Hence, for every triangle,
+\begin{equation}\label{eq:tmin-lower}
+t_{\min} \ge c(T)\,h_0^2, \qquad c(T) = D\min\Bigl(\frac{D}{4s^3}, \frac{1}{2s^2}\Bigr).
+\end{equation}
+Conversely, let $T_0 = \{1 \le D \le 3,\ |\xi_0| \le 1,\ \bigl||\xi_0| - D/2\bigr| \ge 1/4\}$, an event of positive probability,
+and let $h_0 \le 1/20$. The two sides at the middle vertex are at least $1/4$, so the other two angles are at most
+$\arctan(4h_0)$ and $\theta \ge \pi - 2\arctan(1/5) > \pi/2$. Then $1 - \cos\theta \ge 1$, and
+\begin{equation}\label{eq:tmin-upper}
+t_{\min} \le r_{\mathrm{in}}\sin\theta = \frac{D^2h_0^2}{2s\,pq} \le 72\,h_0^2 .
+\end{equation}
+
+\paragraph{Noise} The observed tangent lengths are $(\hat r_1 + \hat r_2 - D)/2$ and $(D \pm (\hat r_1 - \hat r_2))/2$, so
+each differs from its noise-free value by $\sigma(\pm\varepsilon_1 \pm \varepsilon_2)/2$, an $N(0, \sigma^2/2)$ variable
+independent of the anchors and at most $\sigma(|\varepsilon_1| + |\varepsilon_2|)/2$ in absolute value. A negative
+observed tangent length means inconsistent data.
+
+\paragraph{Upper bound} Apply Theorem~\ref{thm:staircaseW}(i) with $s_1 = s_2$ to the observed triangle, centred at the
+anchor of the shorter observed range, so $\mu = \hat r_{\min}/\hat R$ with $\hat R = \sqrt2\,\hat t_{\min}$. Since
+$\ln(2\mu/\alpha) \ge \ln 4$, $G(\ln(2\mu/\alpha)) \le 6\mu$ and $L \le \ln(6\mu/\alpha)$. Suppose
+$\hat t_{\min} \ge 2\sigma(\ln 1/\sigma)^{1/2}$ and $\hat r_{\min} \le 1/\sigma$. Then $\mu \le \sigma^{-2}$, so
+$L \le 3\ln(1/\sigma)$ and $2L + 2\ln(2L) \le 8\ln(1/\sigma) \le \hat R^2/\sigma^2$ for $\sigma \le \sigma_0(\alpha)$, that is,
+$\sigma \le \sigma_1$, and the region is two pieces. With the noise bound,
+\[ \text{fail} \subset \{t_{\min} < \sigma\Xi\} \cup \{\hat r_{\min} > 1/\sigma\}, \qquad
+   \Xi = 2(\ln 1/\sigma)^{1/2} + (|\varepsilon_1| + |\varepsilon_2|)/2, \]
+and the second event has probability at most $e^{-c/\sigma^2}$.
+
+On $\{h_0 \le 1\}$, \eqref{eq:tmin-lower} with $s \le s_0 + 1$ gives $t_{\min} \ge c_0h_0^2$, where
+$c_0 = D\min\bigl(D/4(s_0 + 1)^3, 1/2(s_0 + 1)^2\bigr)$ depends on $(D, \xi_0)$ only; so $t_{\min} < \sigma\Xi$ forces
+$h_0 < (\sigma\Xi/c_0)^{1/2}$. Since $h_0$ is independent of $(D, \xi_0, \varepsilon)$,
+\[ \Pr(\text{fail},\ h_0 \le 1) \le \frac{2}{\sqrt\pi}\,\sigma^{1/2}\,E[\Xi^{1/2}]\,E[c_0^{-1/2}] + e^{-c/\sigma^2}
+   \le C\sigma^{1/2}(\ln 1/\sigma)^{1/4}, \]
+because $E\Xi^{1/2} \le C(\ln 1/\sigma)^{1/4}$, and $c_0^{-1/2} \le \bigl(2(s_0 + 1)^{3/2} + \sqrt2(s_0 + 1)\bigr)(D^{-1} + D^{-1/2})$
+is integrable: $D$ has density $(D/2)e^{-D^2/4}$, and $s_0 \le D + |\xi_0|$ with $\xi_0 \sim N(0, 1/2)$.
+
+On $\{h_0 > 1\}$, \eqref{eq:tmin-lower} with $s \le s_0 + h_0$ gives
+$t_{\min} \ge D\min\bigl(D/4(s_0 + 1)^2(s_0 + h_0), 1/2(s_0 + 1)^2\bigr)$, so $t_{\min} < \sigma\Xi$ needs
+$D < 2\sigma\Xi(s_0 + 1)^2$ or $(s_0 + h_0)(s_0 + 1)^2 > D^2/4\sigma\Xi$. The event $\{D < \sigma^{1/3}\}$
+has probability at most $\sigma^{2/3}/4$. On $\{D \ge \sigma^{1/3}\}$ either condition forces
+$(s_0 + h_0 + 1)^3\Xi > \sigma^{-1/3}/4$, whose probability is $O(\sigma^k)$ for every $k$, by the Gaussian tails of
+$D$, $\xi_0$, $h_0$ and $\varepsilon$. So $\Pr(\text{fail},\ h_0 > 1) = o(\sigma^{1/2})$.
+
+\paragraph{Lower bound} On $T_0 \cap \{h_0 \le (\sigma/72)^{1/2}\}$, with $\sigma \le 0.18$ so that $h_0 \le 1/20$,
+\eqref{eq:tmin-upper} gives $t_{\min} \le \sigma$. The observed tangent length at the vertex of the largest angle is
+$t_{\min} + \sigma Z$ with $Z \sim N(0, 1/2)$ independent of the anchors, so it is negative, the data are inconsistent and
+the region is not two pieces (Lemma~\ref{rem:inconsistent}), with probability at least
+$p_0 = \Pr(Z < -1) = \Phi(-\sqrt2) > 0.078$. Since $h_0$ is independent of $(D, \xi_0)$,
+\[ \Pr(\text{fail}) \ge \Pr(T_0)\,\Pr\bigl(h_0 \le (\sigma/72)^{1/2}\bigr)\,p_0
+   \ge \Pr(T_0)\,p_0\,\frac{2}{\sqrt{72\pi}}\,e^{-\sigma/72}\sqrt\sigma . \qquad\qedsymbol \]
+
