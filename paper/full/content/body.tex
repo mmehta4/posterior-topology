@@ -13,8 +13,8 @@ ellipse \citep{kay1993}, or approximates the posterior by a Gaussian through a L
 or an extended Kalman filter \citep{jazwinski1970}. Every such summary has a convex credible region. Particle methods and
 nonparametric belief propagation can carry multimodal posteriors \citep{doucet2001,thrun2005,ihler2005}, but their output
 is still read through means, covariances or modes. The Bernstein--von Mises theorem \citep[Chapter~10]{vandervaart1998}
-explains why Gaussian summaries usually work, but it needs the posterior to concentrate at an isolated, non-degenerate
-mode. With $n \le d$ ranges in $\R^d$ there is none: generically the noise-free solutions form a $(d - n)$-sphere, a
+explains why Gaussian summaries usually work as data accumulate, and the Laplace method does the same here, with one
+observation per anchor and small noise; both need the posterior to concentrate at an isolated, non-degenerate mode. With $n \le d$ ranges in $\R^d$ there is none: generically the noise-free solutions form a $(d - n)$-sphere, a
 mirror pair when $n = d$. When the true region is a shell, or two separate pieces, a Gaussian summary is wrong in kind
 and its centre may lie where the data rule the target out. The question we answer is exact: for which noise levels does
 the credible region have which topology?
@@ -49,6 +49,9 @@ of topologies follows in every dimension.
 \item \emph{Unequal noise} (Theorem~\ref{thm:unequal}). With a different noise level on each range the disc becomes an
 ellipse. A contact and an anchor can then annihilate, so a hole that equal noise would create never forms; this happens at
 most once, always at the noisier anchor, and never as the first event.
+\item \emph{Three ranges in the plane} (Theorem~\ref{thm:far}, Proposition~\ref{prop:birth}). A hole can surround no
+anchor: for distant truths the last hole closes at the Fermat point of the anchors, and the centre of the last hole
+passes from an anchor to the Fermat point through a fold at an explicit distance.
 \item \emph{Up to $d$ ranges} (Theorem~\ref{thm:nranges}). For $n \le d$ affinely independent anchors the region has
 the noise-free shape, a thickened $(d - n)$-sphere, while it misses the affine hull of the anchors; for $n = d$ it is
 two pieces exactly then.
@@ -85,11 +88,11 @@ and density level sets have a long statistical history: as cluster definitions \
 through the excess mass \citep{polonik1995}, with minimax rates \citep{tsybakov1997}, and with confidence sets and
 visualisation \citep{chen2017}; inference for modes is developed by \citet{genovese2016}. That literature estimates level
 sets of an unknown density from data. Here the density is known, and the question is how the topology of its level sets
-is organised and when it changes. \citet{tommei2026} proves that the first two moments do not determine the number of
-connected components of highest-density credible sets, using a constructed pair of smooth densities, and shows that
-within a $C^2$ family the credible sets at fixed mass keep their isotopy type until the threshold crosses a critical
-point. Our Proposition~\ref{prop:gauss} is a natural, dimension-indexed counterpart for holes at a sharp threshold, at a
-non-smooth point outside the hypotheses of that theorem.
+is organised and when it changes. \citet[Theorem~2]{tommei2026} proves that the first two moments do not determine the number of
+connected components of highest-density credible sets, using a constructed pair of smooth densities, and
+\citet[Theorem~3]{tommei2026} shows that within a $C^2$ family the credible sets at fixed mass keep their isotopy type
+until the threshold crosses a critical point. Our Proposition~\ref{prop:gauss} is a natural, dimension-indexed
+counterpart of the first for holes at a sharp threshold, at a non-smooth point outside the hypotheses of the second.
 
 \emph{Topology.} Topological data analysis \citep{carlsson2009,edelsbrunner2010,wasserman2018} estimates homology from
 samples: \citet{bobrowski2017} recover the homology of density level sets and \citet{fasy2014} build confidence sets for
@@ -312,9 +315,9 @@ before, since $V$ is strictly increasing. Substituting $u = \kappa v$, the resca
 $f_\kappa(v) \propto v^{d-1}e^{-V(\kappa|v-1|)}$ on $(0, \infty)$. For $\kappa < \kappa'$ and $y = |v - 1| > 0$,
 \begin{gather*}
 \frac{f_{\kappa'}}{f_\kappa}(v) = C\exp\bigl(-[V(\kappa'y) - V(\kappa y)]\bigr), \\
-V(\kappa' y) - V(\kappa y) = g(\log y + \log\kappa') - g(\log y + \log\kappa),
+V(\kappa' y) - V(\kappa y) = \tilde V(\log y + \log\kappa') - \tilde V(\log y + \log\kappa),
 \end{gather*}
-with $g(t) = V(e^t)$. Increments of a strictly convex function over a fixed step increase strictly, so the likelihood
+with $\tilde V(t) = V(e^t)$. Increments of a strictly convex function over a fixed step increase strictly, so the likelihood
 ratio $L$ is strictly decreasing in $y$: a monotone likelihood ratio \citep{karlin1956}. With $A = \{|v - 1| < 1\}$ and $E_\kappa L = 1$,
 $\Pr_{\kappa'}(A) - \Pr_\kappa(A) = \Pr_\kappa(A)\Pr_\kappa(A^c)\bigl(E_\kappa[L \mid A] - E_\kappa[L \mid A^c]\bigr) > 0$: the same
 sorting. Continuity is dominated convergence. As $\kappa \to 0$, the numerator of $M_d^V$ is at most
@@ -346,13 +349,13 @@ $q_d/2 = 31.086$ and $111.908$.
 \end{proposition}
 
 \begin{proof}
-Let $Y \sim \mathrm{Gamma}(d, 1)$ and $\omega(\kappa) = \Pr(Y \le \kappa)$. Multiplying numerator and denominator of
+Let $Y \sim \mathrm{Gamma}(d, 1)$ and $\varpi(\kappa) = \Pr(Y \le \kappa)$. Multiplying numerator and denominator of
 $M_d^V(\kappa)$ by $e^{-\kappa}/\Gamma(d)$ turns the integrand into $u^{d-1}e^{-u}/\Gamma(d)$ on $u > \kappa$ and into
-$u^{d-1}e^{u - 2\kappa}/\Gamma(d)$ on $u < \kappa$, whose integral $A = E[e^{2(Y-\kappa)};\, Y \le \kappa]$ lies in $[0, \omega]$. So
+$u^{d-1}e^{u - 2\kappa}/\Gamma(d)$ on $u < \kappa$, whose integral $A = E[e^{2(Y-\kappa)};\, Y \le \kappa]$ lies in $[0, \varpi]$. So
 \[ M_d^V(\kappa) = \frac{A + \Pr(\kappa < Y \le 2\kappa)}{A + \Pr(Y > \kappa)}, \]
-and since $0 \le A \le \omega$ and $\Pr(Y > \kappa) = 1 - \omega$, this gives
-$\Pr(Y \le 2\kappa) - \omega \le M_d^V(\kappa) \le \Pr(Y \le 2\kappa)$. For $\kappa$ within $O(\sqrt d)$ of $d/2$, the Chernoff bound gives
-$\omega \le e^{-d(a - 1 - \log a)}$ with $a = \kappa/d \to 1/2$, and $\tfrac12 - 1 + \log 2 = 0.193 > 0$. Since $M_d^V$ is
+and since $0 \le A \le \varpi$ and $\Pr(Y > \kappa) = 1 - \varpi$, this gives
+$\Pr(Y \le 2\kappa) - \varpi \le M_d^V(\kappa) \le \Pr(Y \le 2\kappa)$. For $\kappa$ within $O(\sqrt d)$ of $d/2$, the Chernoff bound gives
+$\varpi \le e^{-d(a - 1 - \log a)}$ with $a = \kappa/d \to 1/2$, and $\tfrac12 - 1 + \log 2 = 0.193 > 0$. Since $M_d^V$ is
 increasing (Theorem~\ref{thm:noise}) and $\Pr(Y \le 2\kappa)$ has slope of order $d^{-1/2}$ near $\kappa = q_d/2$, the root of
 $M_d^V = 1 - \alpha$ is within $O(\sqrt d\,e^{-cd})$ of $q_d/2$. The Cornish--Fisher expansion \citep{cornish1938} of the Gamma quantile, with mean
 $d$, variance $d$ and skewness $2/\sqrt d$, is $q_d = d + z\sqrt d + (z^2 - 1)/3 + O(d^{-1/2})$.
@@ -378,23 +381,24 @@ increases strictly in $w$; so $p(x) > p(a)$ for $0 < \|x - a\| < r$.
 
 \begin{proposition}[Same two moments, different topology]\label{prop:gauss}
 Assume Gaussian noise, or the noise of Theorem~\ref{thm:noise} with $\int_0^\infty v^{d+1}e^{-V(v)}\dd v < \infty$. Let
-$v = E\|X - a\|^2/d$ and $G = N(a, vI_d)$. Then $G$ and the posterior have the same mean and covariance, every HPD
-region of $G$ is a ball, and for $r/\sigma > \kappa_d(\alpha)$ the posterior's $\HPD$ has $\beta_{d-1} = 1$ ($d \ge 2$),
-respectively $\beta_0 = 2$ ($d = 1$).
+$\varsigma^2 = E\|X - a\|^2/d$ and $G = N(a, \varsigma^2I_d)$. Then $G$ and the posterior have the same mean and covariance,
+every HPD region of $G$ is a ball, and for $r/\sigma > \kappa_d(\alpha)$ (Gaussian noise), respectively
+$r/\sigma > \kappa_d^V(\alpha)$ (otherwise), the posterior's $\HPD$ has $\beta_{d-1} = 1$ ($d \ge 2$), respectively
+$\beta_0 = 2$ ($d = 1$).
 \end{proposition}
 
 \begin{proof}
 For orthogonal $Q$, $x \mapsto a + Q(x - a)$ preserves the posterior, so its covariance $\Sigma$ satisfies
 $\Sigma = Q\Sigma Q^\top$ for all $Q \in O(d)$. Coordinate reflections give $\Sigma_{ij} = 0$ for $i \ne j$ and permutations
-give equal diagonal entries, so $\Sigma = (\tr\Sigma/d)I = vI$. The mean matches by Corollary~\ref{cor:mean}; the topology
+give equal diagonal entries, so $\Sigma = (\tr\Sigma/d)I = \varsigma^2I$. The mean matches by Corollary~\ref{cor:mean}; the topology
 is Lemma~\ref{lem:shell}.
 \end{proof}
 
-More generally, any density with convex superlevel sets (Gaussian, elliptical, log-concave; \citealp{saumard2014}) has
+More generally, any density with convex superlevel sets (Gaussian, unimodal elliptical, log-concave; \citealp{saumard2014}) has
 contractible HPD regions, so no summary drawn from such a family can represent the hole, however its parameters are fitted.
 Proposition~\ref{prop:gauss} is complementary to \citet[Theorem~2]{tommei2026}: it concerns holes ($\beta_{d-1}$)
 rather than components, arises in a measurement model rather than a constructed pair, and holds at an explicit, sharp
-threshold in every dimension. It is not an instance of that result, because the posterior is not differentiable at the
+threshold in every dimension. Nor is the threshold an instance of \citet[Theorem~3]{tommei2026}, because the posterior is not differentiable at the
 anchor, and the anchor is exactly where the hole fills.
 
 \begin{figure}[t]\centering
@@ -676,75 +680,76 @@ and exactly one does at $(2.5, 1.5)$.
 \end{remark}
 
 When the truth is far from the anchors the picture is complete, and it has a hole that surrounds no anchor. Let $x_F$
-be the Fermat point of the anchors, the minimiser of $F(x) = \sum_i\|x - a_i\|$; let $\bar a$ be their centroid and
-$M = \sum_i(a_i - \bar a)(a_i - \bar a)^\top$, with eigenvalues $\lambda_1 \ge \lambda_2 > 0$; and for unit vectors
-$\theta, \varphi$ put $G_\theta(\varphi) = (\theta - \varphi)^\top M(\theta - \varphi)$.
+be the Fermat point of the anchors, the minimiser of the total distance $\mathcal D(x) = \sum_i\|x - a_i\|$; let $\bar a$ be
+their centroid and $M = \sum_i(a_i - \bar a)(a_i - \bar a)^\top$, with eigenvalues $\lambda_1 \ge \lambda_2 > 0$; and for a
+unit vector $\vartheta_*$, the direction of the truth, put $G(\vartheta) = (\vartheta_* - \vartheta)^\top M(\vartheta_* - \vartheta)$ for
+unit vectors $\vartheta$.
 
 \begin{theorem}[Far truth]\label{thm:far}
-Let the data be exact, with $x^* = R\theta$, $|\theta| = 1$, the anchors fixed, and $R \to \infty$; assume that the
-critical points of $G_\theta$ on the unit circle are non-degenerate.
+Let the data be exact, with $x^* = \varrho\,\vartheta_*$, the anchors fixed, and $\varrho \to \infty$; assume that the critical
+points of $G$ on the unit circle are non-degenerate.
 \begin{enumerate}[label=(\roman*)]
-\item If every angle of the anchor triangle is less than $120^\circ$, $S$ has a non-degenerate local maximum $x_R$ with
-$x_R - x_F = O(1/R)$ and $\Delta(x_R) > \Delta(a_i)$ for every $i$, and no anchor is a local maximum of $S$. If one angle
-exceeds $120^\circ$, the anchor at that vertex is a local maximum, and $S$ has no smooth critical point within a fixed
-distance of the anchors.
-\item Outside a fixed disc around the anchors, the critical points of $S$ lie at distance $R + O(1)$ from the origin, in
-directions that tend to the critical points of $G_\theta$: a minimum of $G_\theta$ gives a local minimum of $S$, a
-maximum gives a saddle, and the depth tends to $\frac12 G_\theta$ there. $G_\theta$ has two critical points, or four
-exactly when $(\lambda_1|\theta_1|)^{2/3} + (\lambda_2|\theta_2|)^{2/3} < (\lambda_1 - \lambda_2)^{2/3}$, with $\theta_k$ the
-coordinates of $\theta$ along the eigenvectors of $M$; four needs $\lambda_1 > 2\lambda_2$.
-\item Hence, if every angle is below $120^\circ$ and $G_\theta$ has two critical points, $S$ has exactly three critical
-points, $x^*$, a saddle and $x_R$, and for $d = 2$ the HPD region is contractible for
-$\Delta_\alpha < \frac12\max G_\theta$, a ring around the anchors for $\frac12\max G_\theta < \Delta_\alpha < \Delta(x_R)$,
-and contractible again beyond, where $\Delta(x_R) = \frac12\sum_i(r_i - \|x_F - a_i\|)^2 + O(1/R)$.
+\item If every angle of the anchor triangle is less than $120^\circ$, $S$ has a non-degenerate local maximum $x_\varrho$
+with $x_\varrho - x_F = O(1/\varrho)$ and $\Delta(x_\varrho) > \Delta(a_i)$ for every $i$, and no anchor is a local maximum of $S$.
+If one angle exceeds $120^\circ$, the anchor at that vertex is a local maximum, and $S$ has no smooth critical point
+within a fixed distance of the anchors.
+\item Outside a fixed disc around the anchors, the critical points of $S$ lie at distance $\varrho + O(1)$ from the origin,
+in directions that tend to the critical points of $G$: a minimum of $G$ gives a local minimum of $S$, a maximum gives a
+saddle, and the depth tends to $\frac12 G$ there. $G$ has two critical points, or four exactly when
+$(\lambda_1|\vartheta_{*1}|)^{2/3} + (\lambda_2|\vartheta_{*2}|)^{2/3} < (\lambda_1 - \lambda_2)^{2/3}$, with $\vartheta_{*k}$ the
+coordinates of $\vartheta_*$ along the eigenvectors of $M$; four needs $\lambda_1 > 2\lambda_2$.
+\item Hence, if every angle is below $120^\circ$ and $G$ has two critical points, $S$ has exactly three critical points,
+$x^*$, a saddle and $x_\varrho$, and for $d = 2$ the HPD region is contractible while $\Delta_\alpha$ is below the depth of
+the saddle, which tends to $\frac12\max G$; a ring around the anchors from that depth until $\Delta_\alpha$ reaches
+$\Delta(x_\varrho) = \frac12\sum_i(r_i - \|x_F - a_i\|)^2 + O(1/\varrho)$; and contractible again beyond.
 \end{enumerate}
 \end{theorem}
 
 The proof is in Supplement~\ref{app:three}. Its core is the expansion
-$S = \sum_i r_i^2 - 2RF(x) + O(1)$ near the anchors: the least plausible point of the cluster is the one with the
-smallest total distance to the anchors. Seen from far away, three ranges are three nearly equal measurements of one
+$S = \sum_i r_i^2 - 2\varrho\,\mathcal D(x) + O(1)$ near the anchors: the least plausible point of the cluster is the one with
+the smallest total distance to the anchors. Seen from far away, three ranges are three nearly equal measurements of one
 distance, and the region behaves like that of a single range whose anchor is the Fermat point (Figure~\ref{fig:three}).
-The threshold of Theorem~\ref{thm:main} carries over approximately: for $x^* = (0, -8)$ and the equilateral anchors above, the hole
-forms at $\sigma = 0.969$ and closes at $\sigma = 6.167$, against $\sqrt{2\Delta(x_R)}/\kappa_2 = 6.137$. When $G_\theta$ has
-four critical points, $S$ has a second local minimum far away. For the anchors $(\pm2, 0)$, $(0, 1.5)$ and
-$\theta = (0, -1)$, $R = 60$, it lies at $(0, 61.0007)$, at depth $2.999$ against the limit $2\lambda_2 = 3$; as the anchors
-become collinear it tends to the mirror image of $x^*$ in their line, at depth $2\lambda_2 \to 0$. It is what remains of
-the flip ambiguity, and it can split the region: for $x^* = (0, -20)$ the $95\%$ region is two pieces at $\sigma = 1$,
-a false flip ambiguity although three ranges determine the point.
+The threshold of Theorem~\ref{thm:main} carries over approximately: for $x^* = (0, -8)$ and the equilateral anchors above,
+the hole forms at $\sigma = 0.969$ and closes at $\sigma = 6.167$, against $\sqrt{2\Delta(x_\varrho)}/\kappa_2 = 6.137$. When $G$
+has four critical points, $S$ has a second local minimum far away. For the anchors $(\pm2, 0)$, $(0, 1.5)$,
+$\vartheta_* = (0, -1)$ and $\varrho = 60$, it lies at $(0, 61.0007)$, at depth $2.999$ against the limit $2\lambda_2 = 3$; as the
+anchors become collinear it tends to the mirror image of $x^*$ in their line, at depth $2\lambda_2 \to 0$. It is what
+remains of the flip ambiguity, and it can split the region: for $x^* = (0, -20)$ the $95\%$ region is two pieces at
+$\sigma = 1$, a false flip ambiguity although three ranges determine the point.
 
 \begin{figure}[t]\centering
 \includegraphics[width=\linewidth]{fig14_three.pdf}
 \caption{Three ranges in the plane, anchors $(0, 1)$, $(\pm\sqrt3/2, -1/2)$ (triangles), exact data. (a) Positions of
 $x^*$ at which $S$ has a smooth local maximum (dark): only when the truth is far from the anchors. (b)--(d) $x^* = (0, -8)$
 (cross): the $95\%$ region is an arc, then a ring around all three anchors, then one piece; the hole closes at the smooth
-maximum (amber, at the Fermat point up to $O(1/R)$), at $\sigma = 6.167$, after every anchor has been covered
+maximum (amber, at the Fermat point up to $O(1/\varrho)$), at $\sigma = 6.167$, after every anchor has been covered
 (Theorem~\ref{thm:far}). Each panel's Betti numbers were checked on the grid.}
 \label{fig:three}
 \end{figure}
 
 \begin{proposition}[How the Fermat maximum is born]\label{prop:birth}
-Take the anchors $(0, 1)$, $(\pm\sqrt3/2, -1/2)$, exact data with $x^* = (0, -R)$, and $R \ge 2$. The anchor $(0, 1)$ is a
-local maximum of $S$ exactly for $R < 13/2$, and the other two exactly for $R < 2.7227$. On the symmetry axis inside the
-triangle, $S$ has no critical point for $R < R_0 = (1 + 5\sqrt5)/2 = 6.0902$; at $R_0$ a degenerate one appears at
-$(0, (\sqrt5 - 1)/2)$ and splits into a strict local maximum and a saddle. The saddle reaches $(0, 1)$ at $R = 13/2$,
-exactly when that anchor stops being a local maximum, and the maximum tends to the centre, the Fermat point, as
-$R \to \infty$.
+Take the anchors $(0, 1)$, $(\pm\sqrt3/2, -1/2)$, exact data with $x^* = (0, -\varrho)$, and $\varrho \ge 2$. The anchor $(0, 1)$
+is a local maximum of $S$ exactly for $\varrho < 13/2$, and the other two exactly for $\varrho < 2.7227$. On the symmetry
+axis inside the triangle, $S$ has no critical point for $\varrho < \varrho_0 = (1 + 5\sqrt5)/2 = 6.0902$; at $\varrho_0$ a
+degenerate one appears at $(0, (\sqrt5 - 1)/2)$ and splits into a strict local maximum and a saddle. The saddle reaches
+$(0, 1)$ at $\varrho = 13/2$, exactly when that anchor stops being a local maximum, and the maximum tends to the centre,
+the Fermat point, as $\varrho \to \infty$.
 \end{proposition}
 
 So the hole that closes at an anchor for nearby truths and the one that closes at the Fermat point for distant truths
-are exchanged through a fold, at a golden-ratio point of the axis. Not every exchange is a fold: when the radial
-curvature of $S$ at the anchor is negative at the moment its test fails, as on an isosceles triangle with a $115^\circ$
-apex, the anchor releases a smooth maximum directly, at distance $(|v_i| - r_i)/|c|$ from itself, where $c$ is that
-curvature. With noise $\sigma s_i$ on range $i$, the same argument puts the last hole at the minimiser of
-$\sum_i\|x - a_i\|/s_i^2$. Two questions remain open. A smooth maximum can occur
-even when $x^*$ is inside the anchor triangle: for the anchors $(2.2308, -0.2168)$, $(-1.2836, -3.3176)$,
-$(2.0261, 0.0052)$ and $x^* = (1.0874, -1.1301)$, $S$ has a strict local maximum at $(2.2112, -0.0204)$, between the two
-anchors $0.30$ apart, so what matters is the distance of the truth relative to the anchor spacing it sees. And in $30\,000$ random
+are exchanged through a fold, at a golden-ratio point of the axis. Not every exchange is a fold. Along a ray from $a_i$,
+$S(a_i + t\vartheta) = S(a_i) - 2t(r_i - v_i\cdot\vartheta) + c\,t^2 + O(t^3)$; when $c < 0$ in the direction of $v_i$ at the
+moment the test fails, as on an isosceles triangle with a $115^\circ$ apex, the anchor releases a smooth maximum
+directly, at distance $(|v_i| - r_i)/|c|$ from itself. With noise $\sigma\omega_i$ on range $i$, the same argument puts the
+last hole at the minimiser of $\sum_i\|x - a_i\|/\omega_i^2$. Two questions remain open. A smooth maximum can occur even
+when $x^*$ is inside the anchor triangle: for the anchors $(2.2308, -0.2168)$, $(-1.2836, -3.3176)$, $(2.0261, 0.0052)$
+and $x^* = (1.0874, -1.1301)$, $S$ has a strict local maximum at $(2.2112, -0.0204)$, between the two anchors $0.30$
+apart, so what matters is the distance of the truth relative to the anchor spacing it sees. And in $30\,000$ random
 configurations, with exact and with noisy data, $S$ never had more than one smooth local maximum ($4738$ had one); we
 conjecture that this holds in general, which would make the complete sequence of topologies for three ranges in the
 plane a finite case analysis. It fails for four anchors: two tight pairs, such as $(2.4153, -0.1525)$, $(2.4712, 0.0281)$
-and $(-3.478, 1.7811)$, $(-3.2678, 1.3587)$ with $x^* = (-1.0069, -1.0872)$, each act as a small far cluster, and $S$ has two
-strict smooth maxima.
+and $(-3.478, 1.7811)$, $(-3.2678, 1.3587)$ with $x^* = (-1.0069, -1.0872)$, each act as a small far cluster, and $S$ has
+two strict smooth maxima.
 
 \subsection{Up to $d$ ranges}\label{sec:nranges}
 
@@ -838,9 +843,9 @@ Lemma~\ref{lem:lift}. For $n \ge 3$ the residual domain is not convex, and wheth
 
 \subsection{Unequal noise levels}\label{sec:unequal}
 
-Real ranging systems have a different noise level on each range. Let range $i$ have noise $\sigma_i = \sigma s_i$ with
-fixed weights $s_1, s_2 > 0$, and let $\sigma$ grow. Write $W = \mathrm{diag}(s_1^{-2}, s_2^{-2})$, $\bar s^2 = (s_1^2 + s_2^2)/2$ and
-$\eta = (s_1^2 - s_2^2)/(s_1^2 + s_2^2) \in (-1, 1)$, so that $s_1^2 = \bar s^2(1 + \eta)$, $s_2^2 = \bar s^2(1 - \eta)$, and
+Real ranging systems have a different noise level on each range. Let range $i$ have noise $\sigma_i = \sigma \omega_i$ with
+fixed weights $\omega_1, \omega_2 > 0$, and let $\sigma$ grow. Write $W = \mathrm{diag}(\omega_1^{-2}, \omega_2^{-2})$, $\bar\omega^2 = (\omega_1^2 + \omega_2^2)/2$ and
+$\eta = (\omega_1^2 - \omega_2^2)/(\omega_1^2 + \omega_2^2) \in (-1, 1)$, so that $\omega_1^2 = \bar\omega^2(1 + \eta)$, $\omega_2^2 = \bar\omega^2(1 - \eta)$, and
 $\eta > 0$ when range 1 is the noisier. The depth is now
 $\Delta = e^\top We/2$, the posterior in residual coordinates is proportional to $e^{-\Delta/\sigma^2}J(e)$ on $F$ with the
 same $J$, and Theorem~\ref{thm:depth} holds unchanged, since its proof uses only the exponential-family form. Every HPD
@@ -851,17 +856,17 @@ reached. With equal noise the two coincide, because every foot lies inside its e
 
 \begin{theorem}[Unequal noise]\label{thm:unequal}
 \begin{enumerate}[label=(\roman*)]
-\item On the three wall lines, $\Delta$ has minima $t_*^2/\bar s^2$, $t_1^2/\bar s^2$ and $t_2^2/\bar s^2$, attained at the weighted feet
-$-t_*(1+\eta, 1-\eta)$, $t_1(-(1+\eta), 1-\eta)$ and $t_2(1+\eta, -(1-\eta))$. The foot on the base lies inside its edge if
+\item The minima of $\Delta$ on the three wall lines are $t_*^2/\bar\omega^2$, $t_1^2/\bar\omega^2$ and
+$t_2^2/\bar\omega^2$, attained at the weighted feet $-t_*(1+\eta, 1-\eta)$, $t_1(-(1+\eta), 1-\eta)$ and $t_2(1+\eta, -(1-\eta))$. The foot on the base lies inside its edge if
 and only if $t_1 > \eta t_*$ and $t_2 > -\eta t_*$; the foot on the ray beyond $a_1$, if and only if $t_* > \eta t_1$; the
 foot on the ray beyond $a_2$, if and only if $t_* > -\eta t_2$. The anchors have depths
-\[ \Delta(a_1) = \frac{t_*^2 + t_1^2 - 2\eta t_* t_1}{\bar s^2(1 - \eta^2)}, \qquad
-   \Delta(a_2) = \frac{t_*^2 + t_2^2 + 2\eta t_* t_2}{\bar s^2(1 - \eta^2)}. \]
+\[ \Delta(a_1) = \frac{t_*^2 + t_1^2 - 2\eta t_* t_1}{\bar\omega^2(1 - \eta^2)}, \qquad
+   \Delta(a_2) = \frac{t_*^2 + t_2^2 + 2\eta t_* t_2}{\bar\omega^2(1 - \eta^2)}. \]
 \item \emph{Annihilation.} If a weighted foot lies outside its edge, beyond the corner $a_i$, the edge is first met
 exactly when the ellipse contains $a_i$: the contact and the anchor occur at the same depth and $m$ does not change. The
 hole ($d = 2$) or cavity ($d \ge 3$) around $a_i$ that equal noise would create never forms.
 \item At most one foot lies outside its edge, and if one does, it lies beyond the anchor of the noisier range. The first
-transition is always a merge, at depth $t_{\min}^2/\bar s^2$ and at the foot of the wall of $t_{\min}$. So $m$ changes at
+transition is always a merge, at depth $t_{\min}^2/\bar\omega^2$ and at the foot of the wall of $t_{\min}$. So $m$ changes at
 five depths, or at three after an annihilation; with equal noise always at five, counted with multiplicity.
 \end{enumerate}
 \end{theorem}
@@ -869,7 +874,7 @@ five depths, or at three after an annihilation; with equal noise always at five,
 \begin{proof}
 (i) For a line $\{n\cdot e = c\}$, the minimum of $e^\top We/2$ is
 \[ \frac{c^2}{2n^\top W^{-1}n}, \quad\text{attained at}\quad e = \frac{c\,W^{-1}n}{n^\top W^{-1}n}, \]
-and for the three walls $n = (1, \pm1)$, $|c| = 2t_k$ and $n^\top W^{-1}n = 2\bar s^2$; with $s_i^2 = \bar s^2(1 \pm \eta)$ this
+and for the three walls $n = (1, \pm1)$, $|c| = 2t_k$ and $n^\top W^{-1}n = 2\bar\omega^2$; with $\omega_i^2 = \bar\omega^2(1 \pm \eta)$ this
 gives the minima and the feet. The base edge is $\{e_1 + e_2 = -2t_*,\ -2t_1 \le e_1 - e_2 \le 2t_2\}$
 and its foot has $e_1 - e_2 = -2\eta t_*$; the ray beyond $a_1$ is the part of its line with $e_1 + e_2 \ge -2t_*$, and its
 foot has $e_1 + e_2 = -2\eta t_1$; symmetrically for $a_2$. The corner $a_1$ is $(-t_* - t_1, t_1 - t_*)$, and substituting
@@ -885,26 +890,26 @@ inside its edge, and it is the minimum of $\Delta$ over $\partial F$. The first 
 \end{proof}
 
 \begin{corollary}[The weighted anchor test]\label{cor:anchortest}
-The anchor $a_1$ is a strict local minimum of the posterior density if $r_1/s_1^2 > |D - r_2|/s_2^2$ and not a local
-minimum if $r_1/s_1^2 < |D - r_2|/s_2^2$; the strict inequality holds exactly when both feet next to $a_1$ lie inside
+The anchor $a_1$ is a strict local minimum of the posterior density if $r_1/\omega_1^2 > |D - r_2|/\omega_2^2$ and not a local
+minimum if $r_1/\omega_1^2 < |D - r_2|/\omega_2^2$; the strict inequality holds exactly when both feet next to $a_1$ lie inside
 their edges. Symmetrically for $a_2$.
 \end{corollary}
 
 \begin{proof}
 Along a unit direction at $a_1$ making angle $\psi$ with $a_1 - a_2$, the derivative of $\Delta$ is
-$-r_1/s_1^2 + (D - r_2)\cos\psi/s_2^2$. With $r_1 = t_* + t_1$, $D - r_2 = t_1 - t_*$ and $s_i^2 = \bar s^2(1 \pm \eta)$, the
+$-r_1/\omega_1^2 + (D - r_2)\cos\psi/\omega_2^2$. With $r_1 = t_* + t_1$, $D - r_2 = t_1 - t_*$ and $\omega_i^2 = \bar\omega^2(1 \pm \eta)$, the
 inequality reduces to $t_* > \eta t_1$ when $t_1 \ge t_*$, and to $t_1 > \eta t_*$ when $t_1 < t_*$; in each case the other
 foot condition of Theorem~\ref{thm:unequal}(i) holds automatically.
 \end{proof}
 
-Noise on a range weakens its own anchor's pull by the factor $1/s_i^2$; with equal noise the test is the strict triangle
-inequality $r_1 > |D - r_2|$ of Theorem~\ref{thm:triangle}. Annihilation is common: for $s_1 = 2s_2$ it occurs at $62\%$ of
+Noise on a range weakens its own anchor's pull by the factor $1/\omega_i^2$; with equal noise the test is the strict triangle
+inequality $r_1 > |D - r_2|$ of Theorem~\ref{thm:triangle}. Annihilation is common: for $\omega_1 = 2\omega_2$ it occurs at $62\%$ of
 the positions of the noise-free point shown in Figure~\ref{fig:unequal}(b), and over random triangles and weights it occurred
 in about two thirds of cases (Supplement~\ref{app:comp}).
 
 \begin{figure}[t]\centering
 \includegraphics[width=\linewidth]{fig13_unequal.pdf}
-\caption{Unequal noise, $s_1 = 2s_2$ (range 1 noisier, $\eta = 0.6$). (a) Residual coordinates, rotated as in
+\caption{Unequal noise, $\omega_1 = 2\omega_2$ (range 1 noisier, $\eta = 0.6$). (a) Residual coordinates, rotated as in
 Figure~\ref{fig:residual}, for $D = 2$ and noise-free point $(-1.5, 0.6)$: the ellipse $\Delta = \Delta(a_1)$ passes through
 the corner $a_1$; the weighted foot of the base line (open circle) lies beyond $a_1$, while the foot on the ray beyond
 $a_1$ (filled) lies inside its edge. The inner contact and the anchor $a_1$ annihilate. (b) Positions of the noise-free
@@ -917,13 +922,13 @@ events occur.}
 Two cavities coexist at some noise level if and only if no foot leaves its edge and
 $t_2^2(1 - \eta^2) < t_*^2 + t_1^2 - 2\eta t_* t_1$ and $t_1^2(1 - \eta^2) < t_*^2 + t_2^2 + 2\eta t_* t_2$; at $\eta = 0$ this
 is Corollary~\ref{cor:first}(iii). In whitened coordinates $\bar e = W^{1/2}e$ the ellipse is a disc and every wall
-distance is divided by $\bar s$, so the staircase criterion of Proposition~\ref{prop:criterion} becomes
-$\Delta_\alpha < t_{\min}^2/\bar s^2$, the disc of radius $R_W = \sqrt2\,t_{\min}/\bar s$ lying inside the whitened half-strip.
+distance is divided by $\bar\omega$, so the staircase criterion of Proposition~\ref{prop:criterion} becomes
+$\Delta_\alpha < t_{\min}^2/\bar\omega^2$, the disc of radius $R_W = \sqrt2\,t_{\min}/\bar\omega$ lying inside the whitened half-strip.
 Theorem~\ref{thm:staircaseW} gives an explicit noise level below which this holds. Whitening also explains Theorem~\ref{thm:unequal}: it maps the right-angled
 corners of $F$ to corners of angles $\arccos(-\eta)$ at $a_1$ and $\arccos\eta$ at $a_2$, so the corner of the noisier
 range is obtuse, and only at an obtuse corner can the foot of a perpendicular from an interior point land beyond it.
-The first event is the nearest boundary point of the whitened half-strip, which for a convex region is never a corner of
-angle less than $\pi$. In high dimension,
+The first event is the nearest boundary point of the whitened half-strip, which for a convex polygon is never a
+corner. In high dimension,
 $\mathcal E_\sigma = \log\tilde h - \tilde e^\top W\tilde e/2\sigma^2$ is still strictly concave, and Lemma~\ref{lem:cdepth} and
 Theorem~\ref{thm:high} hold with $\delta^* = \tilde e^{*\top}W\tilde e^*/2$, $H = -\nabla^2\log\tilde h + W/\sigma^2$ and
 $g^2 = (W\tilde e^*)^\top H^{-1}(W\tilde e^*)$.
@@ -1057,16 +1062,16 @@ If the posterior were exactly an isotropic Gaussian on the plane, the staircase 
 $\sigma = R/\sqrt{2\ln(1/\alpha)}$. For $d \ge 3$ the proved bound has the same form with $1/\alpha$ replaced by
 $K\Lambda(y_0)/\alpha$: the whole price of rigour is one geometric constant.
 
-\paragraph{Unequal noise} With noise $\sigma s_i$ on range $i$ (\S\ref{sec:unequal}), the same method works in whitened
+\paragraph{Unequal noise} With noise $\sigma \omega_i$ on range $i$ (\S\ref{sec:unequal}), the same method works in whitened
 coordinates $\bar e = W^{1/2}e$, where the HPD region is the disc $|\bar e|^2 \le 2\Delta_\alpha$ and the
-noise-free topology holds if and only if that disc has radius below $R_W = R/\bar s$ (Remark~\ref{rem:unequal}). Put
-$R_i = (s_i/\bar s)R$ and, now, $y = R_W^2/2\sigma^2$.
+noise-free topology holds if and only if that disc has radius below $R_W = R/\bar\omega$ (Remark~\ref{rem:unequal}). Put
+$R_i = (\omega_i/\bar\omega)R$ and, now, $y = R_W^2/2\sigma^2$.
 
 \begin{theorem}[Staircase bound, unequal noise]\label{thm:staircaseW}
 For $\sigma \le \sigma_1$ the $1 - \alpha$ HPD region has the noise-free topology, where:
 \begin{enumerate}[label=(\roman*)]
-\item for $d = 2$ and $\alpha \le 1/2$, with $i$ either anchor, $j$ the other, $\mu_i = r_i/(s_jR_W)$ and
-$G_i(y) = \bigl(2\mu_i + (\mu_i + s_i/2s_j)/y\bigr)/(1 - e^{-y})$,
+\item for $d = 2$ and $\alpha \le 1/2$, with $i$ either anchor, $j$ the other, $\mu_i = r_i/(\omega_jR_W)$ and
+$G_i(y) = \bigl(2\mu_i + (\mu_i + \omega_i/2\omega_j)/y\bigr)/(1 - e^{-y})$,
 \[ \sigma_1 = \frac{R_W}{\sqrt{2L + 2\ln(2L)}}, \qquad L = \ln\frac{G_i\bigl(\ln(2\mu_i/\alpha)\bigr)}{\alpha}; \]
 \item for $d \ge 3$ and any $\beta \in (0,1)$, with
 \[ K_W = \frac{(r_1 + R_1)(r_2 + R_2)}{(r_1 - \beta R_1)(r_2 - \beta R_2)}\Bigl[\frac{\Theta(R)}{\Theta(-\beta R)}\Bigr]^{\frac{d-3}{2}}, \quad
@@ -1075,16 +1080,16 @@ $\Lambda_W(y) = \frac{2y}{2y - \gamma_W}\bigl(1 + \frac{1}{2y - \gamma_W}\bigr)\
 $y_0 = \ln(K_W/\alpha)$, provided $2y_0 > \gamma_W$,
 \[ \sigma_1 = \frac{R_W}{\sqrt{2\ln\bigl(K_W\Lambda_W(y_0)/\alpha\bigr)}} . \]
 \end{enumerate}
-For $s_1 = s_2$, (ii) is Theorem~\ref{thm:staircase}(ii), and (i), centred at the anchor of the shorter range, is at
+For $\omega_1 = \omega_2$, (ii) is Theorem~\ref{thm:staircase}(ii), and (i), centred at the anchor of the shorter range, is at
 least the value of Theorem~\ref{thm:staircase}(i), since then $G_i(\ln(2\mu_i/\alpha)) < 2.38\,\mu_i$ for $\alpha \le 0.05$.
 \end{theorem}
 
 \begin{proof}
-Write $e_i = s_i\bar e_i$. The wall normals are $n = (1, \pm1)/\sqrt2$, and by Cauchy--Schwarz
-$|n\cdot e| = |s_1\bar e_1 \pm s_2\bar e_2|/\sqrt2 \le \bar s|\bar e|$. So, with $u = \bar s|\bar e|$, the
-wall distances lie within $u$ of $\sqrt2\,t_k$, $s'$ lies within $u/\sqrt2$ of $s$, and $|w_i - r_i| \le s_i|\bar e|$:
-Lemma~\ref{lem:weight} holds with $|e|$ replaced by $u$ in the bounds on $h$ and by $s_i|\bar e|$ in those on $w_i$, and
-at $|\bar e| = R_W$, $u = R$. Since $s_i < \sqrt2\,\bar s$, $R_i < \sqrt2 R = 2t_{\min} \le r_i$, so every lower bound
+Write $e_i = \omega_i\bar e_i$. The wall normals are $n = (1, \pm1)/\sqrt2$, and by Cauchy--Schwarz
+$|n\cdot e| = |\omega_1\bar e_1 \pm \omega_2\bar e_2|/\sqrt2 \le \bar\omega|\bar e|$. So, with $u = \bar\omega|\bar e|$, the
+wall distances lie within $u$ of $\sqrt2\,t_k$, $s'$ lies within $u/\sqrt2$ of $s$, and $|w_i - r_i| \le \omega_i|\bar e|$:
+Lemma~\ref{lem:weight} holds with $|e|$ replaced by $u$ in the bounds on $h$ and by $\omega_i|\bar e|$ in those on $w_i$, and
+at $|\bar e| = R_W$, $u = R$. Since $\omega_i < \sqrt2\,\bar\omega$, $R_i < \sqrt2 R = 2t_{\min} \le r_i$, so every lower bound
 stays positive for $\beta < 1$.
 
 (ii) The proof of Theorem~\ref{thm:staircase}(ii) applies in $\bar e$, whose Jacobian is constant: each factor of the
@@ -1093,18 +1098,18 @@ $P_W(\varrho) \le P_W(R_W)e^{\gamma_W(\varrho - R_W)/R_W}$ for $\varrho \ge R_W$
 Theorem~\ref{thm:staircase} with $R$ replaced by $R_W$ and $\gamma R$ by $\gamma_W$.
 
 (i) As in Theorem~\ref{thm:staircase}(i), in polar coordinates about $a_i$: on $\{|\bar e| \ge R_W\}$ the density is at
-most $e^{-y}$, and everywhere at most $e^{-e_i^2/2\sigma^2s_i^2}$, so with the Mills ratio
-\[ \int_{|\bar e| \ge R_W} e^{-|\bar e|^2/2\sigma^2}\dd x \le 2\pi s_i e^{-y}\Bigl[2R_Wr_i + \sigma^2\Bigl(\frac{2r_i}{R_W} + s_i\Bigr)\Bigr], \]
-while the total mass is at least $2s_1s_2\cdot 2\pi\sigma^2(1 - e^{-y})$, by Lemma~\ref{lem:weight}(iv) and
-$\dd e = s_1s_2\dd\bar e$. Dividing, $\Pi_\sigma(|\bar e| \ge R_W) \le ye^{-y}G_i(y)$. Now $G_i$ is decreasing,
-$G_i \ge 2\mu_i$, and $\mu_i \ge \sqrt2\,\bar s/s_j > 1$, so $L \ge \ln(2\mu_i/\alpha) > \ln 4 > 1$ for $\alpha \le 1/2$.
+most $e^{-y}$, and everywhere at most $e^{-e_i^2/2\sigma^2\omega_i^2}$, so with the Mills ratio
+\[ \int_{|\bar e| \ge R_W} e^{-|\bar e|^2/2\sigma^2}\dd x \le 2\pi \omega_i e^{-y}\Bigl[2R_Wr_i + \sigma^2\Bigl(\frac{2r_i}{R_W} + \omega_i\Bigr)\Bigr], \]
+while the total mass is at least $2\omega_1\omega_2\cdot 2\pi\sigma^2(1 - e^{-y})$, by Lemma~\ref{lem:weight}(iv) and
+$\dd e = \omega_1\omega_2\dd\bar e$. Dividing, $\Pi_\sigma(|\bar e| \ge R_W) \le ye^{-y}G_i(y)$. Now $G_i$ is decreasing,
+$G_i \ge 2\mu_i$, and $\mu_i \ge \sqrt2\,\bar\omega/\omega_j > 1$, so $L \ge \ln(2\mu_i/\alpha) > \ln 4 > 1$ for $\alpha \le 1/2$.
 For $y \ge L + \ln(2L)$ we get $ye^{-y}G_i(y) \le \alpha\,ye^{L - y} \le \alpha$, since $y - \ln y$ is increasing for
 $y > 1$ and $L \ge \ln(2L)$.
 \end{proof}
 
-The certificate depends on the noise levels only through the ratios $s_i/\bar s < \sqrt2$, and it is as sharp as with
+The certificate depends on the noise levels only through the ratios $\omega_i/\bar\omega < \sqrt2$, and it is as sharp as with
 equal noise. For the four geometries $x^* = (0.2, 1.1)$, $(0, 1)$, $(0.3, 1.4)$, $(0, 3.7)$, noise ratios
-$s_1 : s_2 = 1 : 1$, $2 : 1$, $1 : 4$ and $d = 2, 3, 4$, the proved $\sigma_1$ is $0.64$--$0.81$ of the true first
+$\omega_1 : \omega_2 = 1 : 1$, $2 : 1$, $1 : 4$ and $d = 2, 3, 4$, the proved $\sigma_1$ is $0.64$--$0.81$ of the true first
 transition, and for a fixed geometry and dimension the ratio changes by at most $0.03$ with the noise ratio
 (Supplement~\ref{app:comp}).
 
@@ -1347,7 +1352,8 @@ $93.6$--$97.6\%$ of data sets; flat-prior HPD regions carry no exact frequentist
 finding, not a theorem. A single Laplace ellipse covers it in about half of the data sets, $46$--$66\%$, as the mirror
 symmetry predicts. The mixture repairs this in the two-piece phase, covering $95.4\%$ with about the same area as the
 HPD region, but it fails once the region is no longer a union of ellipses: from the first ring on ($\sigma \ge 0.56$) it
-covers only $93.0\%$, $90.1\%$, $88.2\%$ and $84.0\%$, although its median area is $12$--$31\%$ larger than that of the
+covers only $93.0\%$, $90.1\%$, $88.2\%$ and $84.0\%$, against $94.4$--$97.6\%$ for the HPD region, although its
+median area is $12$--$31\%$ larger than that of the
 HPD region. The moment-matched ellipse covers, but only by being large: at $\sigma = 0.15$ its median area is $3.7$ times
 that of the HPD region, and its centre, the posterior mean, lies outside the HPD region in $99\%$ of data sets.
 
@@ -1377,8 +1383,8 @@ range, and Remark~\ref{rem:noise2} for two), noise levels known up to a common f
 prior breaks the rotational symmetry the proofs use, and we expect the thresholds to move but not to disappear. With
 three or more ranges in the plane, critical points need not lie on any line (\S\ref{sec:three}).
 
-\paragraph{Code} The software that computes every number, table and figure (Supplement~\ref{app:comp}) will be released in
-a public repository with the published version, with one script per table and figure.
+\paragraph{Code} The software that computes every number, table and figure (Supplement~\ref{app:comp}) is available at
+\url{https://github.com/mmehta4/posterior-topology}, with one script per table and figure.
 
 \paragraph{Acknowledgements} The author used Claude (Anthropic), an AI system, throughout this work: to write and run
 the software, to carry out the numerical verification, to produce the figures, to typeset the paper, and to check and

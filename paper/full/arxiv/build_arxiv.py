@@ -1,4 +1,4 @@
-"""Build the arXiv upload: paper/full/arxiv/arxiv-upload.tar.gz with main.tex, content/, figs/, refs.bib and main.bbl.
+"""Build the arXiv upload: paper/full/arxiv/arxiv-upload.tar.gz with main.tex, content/, figs/, fonts/, refs.bib and main.bbl.
 arXiv must be told to use XeLaTeX (the paper uses OpenType fonts). Usage: python3 build_arxiv.py"""
 import re, subprocess, tarfile
 from pathlib import Path
@@ -13,6 +13,7 @@ files = ["main.tex", "main.bbl", "refs.bib"] + [f"content/{p.name}" for p in sor
 figs = sorted(set(re.findall(r"\\includegraphics(?:\[[^]]*\])?\{([^}]+)\}",
                              "".join((FULL / f).read_text() for f in files if f.endswith(".tex")))))
 files += [f"figs/{f if f.endswith('.pdf') else f + '.pdf'}" for f in figs]
+files += [f"fonts/{p.name}" for p in sorted((FULL / "fonts").iterdir()) if p.suffix in (".otf", ".txt")]
 out = HERE / "arxiv-upload.tar.gz"
 with tarfile.open(out, "w:gz") as tar:
     for f in files:
