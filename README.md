@@ -1,5 +1,7 @@
 # The topology of range-measurement credible regions — code
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23336821.svg)](https://doi.org/10.5281/zenodo.23336821)
+
 Code for the paper *The topology of range-measurement credible regions* (Meet Mehta). Every number, table and
 figure in the paper is computed by a script here.
 
