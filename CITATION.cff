@@ -5,6 +5,8 @@ authors:
   - family-names: Mehta
     given-names: Meet
 license: MIT
+doi: 10.5281/zenodo.23336821
+repository-code: https://github.com/mmehta4/posterior-topology
 type: software
 preferred-citation:
   type: article

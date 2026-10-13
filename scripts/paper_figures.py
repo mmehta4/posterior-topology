@@ -118,7 +118,7 @@ def mesh3d(ax, A, r, sigma, lim, n=150, clip=True, elev=20, azim=58, centre=None
     cols[is_cut] = CUT * (0.92 + 0.08 * diff[is_cut, None])
     from mpl_toolkits.mplot3d.art3d import Poly3DCollection
     cols = np.clip(cols, 0, 1)
-    pc = Poly3DCollection(verts[faces], facecolors=cols, edgecolors=cols, linewidths=0.15, zorder=1)
+    pc = Poly3DCollection(verts[faces], facecolors=cols, edgecolors=cols, linewidths=0.15, zorder=1, rasterized=True)
     ax.computed_zorder = False
     ax.add_collection3d(pc)
     for a in A:
