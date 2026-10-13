@@ -2,9 +2,12 @@
 \usepackage[letterpaper,margin=1.1in]{geometry}
 \usepackage{amsmath,amsthm,mathtools,booktabs,graphicx}
 \usepackage{unicode-math}
-\usepackage[default]{sourceserifpro}
-\usepackage[scale=0.92]{plex-sans}
-\setmathfont{LibertinusMath-Regular.otf}
+% Fonts ship with the source (fonts/, SIL Open Font License), so the build does not depend on TeX Live packages.
+\setmainfont{SourceSerifPro}[Path=fonts/, Extension=.otf, UprightFont=*-Regular, ItalicFont=*-RegularIt,
+  BoldFont=*-Bold, Numbers=Proportional, Ligatures=TeX]
+\setsansfont{IBMPlexSans}[Path=fonts/, Extension=.otf, UprightFont=*-Regular, ItalicFont=*-Italic,
+  BoldFont=*-Bold, BoldItalicFont=*-BoldItalic, Scale=0.92, Ligatures=TeX]
+\setmathfont{LibertinusMath-Regular.otf}[Path=fonts/]
 \usepackage[authoryear,round]{natbib}
 \usepackage{xcolor}
 \definecolor{accent}{HTML}{27548A}
