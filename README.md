@@ -2,8 +2,9 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23336821.svg)](https://doi.org/10.5281/zenodo.23336821)
 
-Code for the paper *The topology of range-measurement credible regions* (Meet Mehta). Every number, table and
-figure in the paper is computed by a script here.
+Code for the paper *The topology of range-measurement credible regions* by Meet Mehta
+(ORCID [0009-0000-3256-1337](https://orcid.org/0009-0000-3256-1337)). Every number, table and figure in the paper is
+computed by a script here. [AUTHORSHIP.md](AUTHORSHIP.md) says how the work was done and who did what.
 
 ## Setup
 

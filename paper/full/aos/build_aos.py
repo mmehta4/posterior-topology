@@ -121,7 +121,7 @@ PREAMBLE = r"""\documentclass[aos]{imsart}
 \endlocaldefs
 """
 AUTHOR = r"""\begin{aug}
-\author[A]{\fnms{Meet}~\snm{Mehta}\ead[label=e1]{meetmehta.5410@gmail.com}}
+\author[A]{\fnms{Meet}~\snm{Mehta}\ead[label=e1]{meetmehta.5410@gmail.com}\orcid{0009-0000-3256-1337}}
 \address[A]{\printead{e1}}
 \end{aug}"""
 KEYWORDS = r"""\begin{keyword}[class=MSC]
