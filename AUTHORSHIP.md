@@ -21,6 +21,6 @@ The dated checkpoint records are available on request.
 
 ## Use of AI tools
 
-Claude (Anthropic) wrote and ran the software in this repository, carried out the numerical checks, produced the
-figures, and helped typeset and draft the paper. The author checked every result and is responsible for the content.
-The commit history records this: every commit is co-authored with Claude.
+Claude (Anthropic), an AI tool, wrote and ran the software in this repository, carried out the numerical checks,
+produced the figures, and helped typeset and draft the paper. It is a tool, not an author or contributor. The author
+checked every result and is responsible for the content.
