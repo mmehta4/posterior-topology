@@ -18,9 +18,3 @@ results are now in the paper:
 | Remark 4.16 | Two ranges under other noise laws |
 
 The dated checkpoint records are available on request.
-
-## Use of AI tools
-
-Claude (Anthropic), an AI tool, wrote and ran the software in this repository, carried out the numerical checks,
-produced the figures, and helped typeset and draft the paper. It is a tool, not an author or contributor. The author
-checked every result and is responsible for the content.
